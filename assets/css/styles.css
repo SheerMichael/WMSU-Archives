@@ -18,16 +18,21 @@ nav ul li {
   margin-right: 20px;
 }
 
-a {
+nav ul li a {
   text-decoration: none;
   color: white;
 }
 
+a {
+  text-decoration: none;
+  color: rgb(32, 168, 213);
+}
+
 .hero {
-  background-image: url("../img/hero.jpg"); /* replace with your actual image path */
+  background-image: url("../img/hero.jpg");
   background-size: cover;
   background-position: center;
-  height: 400px; /* adjust height as needed */
+  height: 550px; /* adjust height as needed */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,4 +55,79 @@ a {
 .hero-content {
   position: relative;
   z-index: 2;
+}
+
+.search-bar {
+  display: flex;
+  max-width: 800px;
+  margin: 40px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+.search-bar input[type="search"] {
+  flex: 1;
+  padding: 10px 15px;
+  border: none;
+  font-size: 1rem;
+  color: #333;
+}
+
+.search-bar button {
+  background-color: #222;
+  color: #fff;
+  border: none;
+  padding: 0 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.search-bar button:hover {
+  background-color: #444;
+}
+
+/* Optional accessibility helper class */
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.recent-submissions {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.recent-submissions article {
+  display: flex;
+  justify-content: start;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.recent-submissions article > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.recent-submissions img {
+  width: 100px;
+  height: 110px;
+  border-radius: 5px;
+  margin: 10px 10px;
 }
