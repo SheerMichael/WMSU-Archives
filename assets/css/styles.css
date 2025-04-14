@@ -108,26 +108,38 @@ a {
   gap: 20px;
 }
 
-aside {
+.lading-aside {
   width: 220px;
   flex-shrink: 0;
 }
 
-aside h2 {
+.aside-1 {
+  padding: 20px;
+}
+
+.aside-2 {
+  padding: 20px;
+}
+
+.landing-aside h3 {
   font-size: 1.1rem;
   margin-bottom: 10px;
 }
 
-aside ul {
-  margin-bottom: 20px;
-  padding-left: 20px;
+.landing-aside ul {
+  margin-bottom: 0px;
+  text-align: left;
 }
 
-aside ul li {
-  list-style: disc;
+.landing-aside ul li {
+  list-style: none;
   margin: 5px 0;
 }
 
+.landing-aside a {
+  text-decoration: none;
+  color: #444;
+}
 .recent-submissions {
   width: calc(100% - 240px); /* 800 - 220 - gap */
 }
@@ -159,7 +171,7 @@ aside ul li {
 }
 
 footer {
-  background-color: #222;
+  background-color: #ff7c7c;
   color: white;
   height: 200px;
 }
@@ -172,14 +184,36 @@ footer {
 }
 
 .footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 30px;
 }
 
 .footer-links ul {
   display: flex;
   justify-content: center;
-  gap: 8px;
+  gap: 4px;
 }
 
 footer ul {
   list-style: none;
+}
+
+.footer-links img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 30px;
 }
