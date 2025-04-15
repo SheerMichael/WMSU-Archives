@@ -217,3 +217,38 @@ footer a {
   align-items: center;
   margin: 50px 30px;
 }
+
+/* CATEGORY LIST */
+
+
+.row {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.container {
+  width: 1125px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#header {
+  background: #fff;
+}
+
+#info-bar {
+  background: rgb(255, 47, 47);
+  color: #fff;
+  padding: 4px 0 3px;
+}
+
+#logo-bar {
+  padding: 0;
+  border-top: 1px solid #fff;
+  background: rgb(221, 50, 50);
+}
+
+
+/* CATEGORY LIST */
