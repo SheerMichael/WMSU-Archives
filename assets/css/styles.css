@@ -4,12 +4,30 @@
   box-sizing: border-box;
 }
 
-nav {
-  background-color: red;
+.navImg {
+  width: 30px;
+  height: 30px;
+}
+
+.navbar1 {
+  background-color: #b80c09;
+  display: flex;
+  justify-content: end;
+}
+
+.navWMSU {
+  background-color: #570000;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 30px;
+}
+
+.navbar2 {
+  background-color: #570000;
   color: white;
   padding: 10px;
-  display: flex;
-  justify-content: space-between;
+  text-align: end;
 }
 
 nav ul li {
@@ -18,14 +36,9 @@ nav ul li {
   margin-right: 20px;
 }
 
-nav ul li a {
+nav a {
   text-decoration: none;
   color: white;
-}
-
-a {
-  text-decoration: none;
-  color: rgb(32, 168, 213);
 }
 
 .hero {
@@ -55,6 +68,30 @@ a {
 .hero-content {
   position: relative;
   z-index: 2;
+  text-align: start;
+  margin: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 60%;
+  gap: 10px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+}
+
+.hero-content a {
+  color: white;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.chev-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .search-bar {
@@ -151,7 +188,6 @@ a {
 
 .recent-submissions article {
   display: flex;
-  gap: 20px;
   margin-bottom: 20px;
   padding: 10px;
   border: 1px solid #ddd;
@@ -160,10 +196,18 @@ a {
 }
 
 .recent-submissions img {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 110px;
   object-fit: cover;
   border-radius: 5px;
+  margin-right: 10px;
+}
+
+.article-content h5 {
+  color: darkturquoise;
+}
+
+.article-content {
 }
 
 .recent-submissions div {
@@ -171,7 +215,7 @@ a {
 }
 
 footer {
-  background-color: #ff7c7c;
+  background-color: #570000;
   color: white;
   height: 200px;
 }
@@ -220,7 +264,6 @@ footer a {
 
 /* CATEGORY LIST */
 
-
 .row {
   margin-left: 15px;
   margin-right: 15px;
@@ -249,6 +292,5 @@ footer a {
   border-top: 1px solid #fff;
   background: rgb(221, 50, 50);
 }
-
 
 /* CATEGORY LIST */
