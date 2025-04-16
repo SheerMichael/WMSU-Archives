@@ -214,6 +214,172 @@ nav a {
   flex: 1;
 }
 
+/* Carousel Container */
+.carousel-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-shrink: 0; /* Prevent slides from shrinking */
+}
+
+/* Author Cards */
+.author-card {
+  flex: 1;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 280px;
+}
+
+.author-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.author-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.author-info h2 {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+  color: #222;
+}
+
+.country {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.author-topic {
+  flex-grow: 1;
+  color: #333;
+  line-height: 1.5;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.follow-btn {
+  padding: 8px 20px;
+  border: 1px solid #2c7db8;
+  color: #2c7db8;
+  background: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  align-self: flex-start;
+  margin-bottom: 15px;
+  transition: all 0.2s ease;
+}
+
+.follow-btn:hover {
+  background-color: #f0f7fc;
+}
+
+.more-link {
+  color: #666;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: bold;
+  display: block;
+}
+
+.more-link:hover {
+  color: #2c7db8;
+}
+
+/* Navigation Controls */
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+
+.carousel-nav:hover {
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-nav.prev {
+  left: -15px;
+}
+
+.carousel-nav.next {
+  right: -15px;
+}
+
+/* Indicators */
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.indicator.active {
+  background-color: #2c7db8;
+  transform: scale(1.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .carousel-slide {
+    flex-direction: column;
+  }
+
+  .author-card {
+    margin-bottom: 15px;
+  }
+
+  .carousel-nav {
+    top: 30%;
+  }
+}
+
 footer {
   background-color: #570000;
   color: white;
