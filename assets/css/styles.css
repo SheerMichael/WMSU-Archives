@@ -185,9 +185,8 @@ nav a {
 }
 
 .recent-submissions h2 {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   margin-bottom: 1rem;
-  color: #333;
 }
 
 .recent-submissions article {
@@ -329,20 +328,22 @@ nav a {
   /* center & constrain */
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding-right: 60px;
+  padding-left: 60px;
+  margin-bottom: 20px;
 }
 
-.featured-authors h1 {
-  margin-bottom: 20px;
+.featured-authors h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
 }
 
 /* use CSS Grid for equal columns & automatic wrapping */
 .author-div {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  /* remove that fixed height */
-  /* height: 500px; */
+  gap: 12px;
+  align-items: start;
 }
 
 /* ensure each card stretches to fill its grid cell */
@@ -352,12 +353,15 @@ nav a {
   background: white;
   border: 1px solid #e0e0e0;
   border-radius: 4px;
-  padding: 20px;
+  padding: 12px;
+  height: auto; /* Allow natural height */
+  box-sizing: border-box;
 }
 
 /* push “Follow” and “More from…” to the bottom when you have extra space */
 .author-topic {
-  flex: 1;
+  max-height: 150px; /* Set a consistent max height */
+  overflow-y: auto; /* Add scrollbar if content exceeds */
   margin-bottom: 15px;
 }
 
@@ -365,7 +369,7 @@ nav a {
 .author-header {
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .author-image {
@@ -374,17 +378,24 @@ nav a {
   border-radius: 50%;
   object-fit: cover;
   margin-right: 15px;
+  flex-shrink: 0;
 }
 
-.author-info h2 {
-  font-size: 1.4rem;
+.author-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.author-info h3 {
+  font-size: 0.9rem;
   margin-bottom: 5px;
   color: #222;
 }
 
 .country {
   color: #666;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .follow-btn {
@@ -413,6 +424,12 @@ nav a {
 
 .more-link:hover {
   color: #2c7db8;
+}
+
+.author-footer {
+  margin-top: auto; /* Push to bottom */
+  display: flex;
+  flex-direction: column;
 }
 
 footer {
