@@ -145,38 +145,69 @@ nav a {
   gap: 20px;
 }
 
-.lading-aside {
-  width: 220px;
-  flex-shrink: 0;
-}
-
-.aside-1 {
+/* Container for the entire section */
+.etd-process-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
 }
 
-.aside-2 {
+/* Individual process cards */
+.etd-process-card {
+  flex: 1;
+  min-width: 240px;
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   padding: 20px;
+  position: relative;
 }
 
-.landing-aside h3 {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
+/* Icon container at the top of card */
+.etd-icon-container {
+  border: 1px solid #8b0000;
+  border-radius: 4px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  position: absolute;
+  top: -30px;
+  background-color: white;
 }
 
-.landing-aside ul {
-  margin-bottom: 0px;
-  text-align: left;
+/* Icon styling */
+.etd-icon {
+  width: 28px;
+  height: 28px;
 }
 
-.landing-aside ul li {
-  list-style: none;
-  margin: 5px 0;
+/* Title styling */
+.etd-card-title {
+  color: #555;
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-weight: normal;
 }
 
-.landing-aside a {
-  text-decoration: none;
-  color: #444;
+/* Description text styling */
+.etd-card-description {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
 }
+
 .recent-submissions {
   width: 100%;
   max-width: 1200px;
