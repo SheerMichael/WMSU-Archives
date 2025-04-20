@@ -152,7 +152,7 @@ nav a {
   justify-content: center;
   gap: 20px;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 0 40px 0;
   padding: 20px;
 }
 
@@ -165,15 +165,21 @@ nav a {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border: 1px solid #ccc;
+  border: 1px solid #de7c5a;
   border-radius: 4px;
   padding: 20px;
   position: relative;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.etd-process-card:hover {
+  box-shadow: 0 2px 4px #de7c5a;
 }
 
 /* Icon container at the top of card */
 .etd-icon-container {
-  border: 1px solid #8b0000;
+  border: 1px solid #de7c5a;
   border-radius: 4px;
   width: 60px;
   height: 60px;
@@ -355,13 +361,123 @@ nav a {
   text-decoration: underline;
 }
 
+.scholarly-hero-container {
+  position: relative;
+  width: 100%;
+  height: 440px; /* Adjust this value as needed */
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end; /* Align items to bottom */
+}
+
+/* Background image styling */
+.scholarly-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Content container for text - using flex instead of absolute */
+.scholarly-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 60px 10%;
+  width: 100%;
+  color: white;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+}
+
+/* Small header text */
+.scholarly-hero-subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+/* Main heading */
+.scholarly-hero-title {
+  font-size: 64px;
+  font-weight: 300;
+  margin: 10px 0 20px;
+  font-family: "Times New Roman", Georgia, serif;
+}
+
+/* Description text */
+.scholarly-hero-description {
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 30px;
+  max-width: 700px;
+}
+
+/* Button wrapper for proper positioning */
+.scholarly-button-wrapper {
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+/* Button styling */
+.scholarly-hero-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: #570000;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease;
+}
+
+.scholarly-hero-button:hover {
+  background-color: #003380;
+}
+
+/* Button icon */
+.scholarly-hero-button-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+/* Arrow icon inside button */
+.scholarly-hero-arrow {
+  color: #0046ad;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .scholarly-hero-title {
+    font-size: 42px;
+  }
+
+  .scholarly-hero-description {
+    font-size: 18px;
+  }
+}
+
 .featured-authors {
   /* center & constrain */
   max-width: 1200px;
   margin: 0 auto;
   padding-right: 60px;
   padding-left: 60px;
-  margin-bottom: 20px;
+  margin: 40px 0 40px 0;
 }
 
 .featured-authors h2 {
@@ -463,52 +579,115 @@ nav a {
   flex-direction: column;
 }
 
-footer {
-  background-color: #570000;
-  color: white;
-  height: 200px;
+.beyond-footer {
+  background: #570000;
+  color: #ffffff;
+  padding: 40px 60px;
+  border-top: 1px solid #440000;
 }
 
-.footer-content {
-  width: 100%;
+.beyond-footer-container {
   display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.beyond-footer-section {
+  min-width: 180px;
+}
+
+.beyond-footer-brand {
+  max-width: 300px;
+}
+
+.beyond-footer-logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.beyond-footer-logo-img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  filter: brightness(0) invert(1); /* if your logo is dark, this inverts it white */
+}
+
+.beyond-footer-desc {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.beyond-footer-contact div {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.beyond-footer-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  filter: brightness(0) invert(1);
+}
+
+.beyond-footer-section h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.beyond-footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.beyond-footer-section li {
+  font-size: 14px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  color: #f0f0f0;
+}
+
+.beyond-footer-section li:hover {
+  text-decoration: underline;
+}
+
+.beyond-footer-bottom {
+  border-top: 1px solid #fdffff;
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  font-size: 13px;
+  color: #dddddd;
 }
 
-.footer-links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 50px 30px;
-}
-
-.footer-links ul {
-  display: flex;
-  justify-content: center;
-  gap: 4px;
-}
-
-footer ul {
-  list-style: none;
-}
-
-.footer-links img {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 10px;
-}
-
-footer a {
-  color: white;
+.beyond-footer-links a {
+  margin-right: 15px;
+  color: #dddddd;
   text-decoration: none;
 }
 
-.footer-contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 50px 30px;
+.beyond-footer-links a:hover {
+  text-decoration: underline;
+}
+
+.beyond-footer-socials img {
+  width: 20px;
+  height: 20px;
+  margin-left: 12px;
+  cursor: pointer;
+  filter: brightness(0) invert(1);
 }
 
 /* CATEGORY LIST */
