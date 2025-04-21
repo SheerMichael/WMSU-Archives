@@ -1,13 +1,509 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="..\assets\img\logo.png" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <title>WMSU-Archives</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar1">
+        <div class="navWMSU">
+          <img class="navImg" src="..\assets\img\logo.png" alt="WMSU Logo" />
+          <a href="">Librero, Sheer Michael C.</a>
+          <p>|</p>
+          <a href="">Log out</a>
+        </div>
+      </nav>
+      <nav class="navbar2">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="#">Resources</a></li>
+          <li><a href="#">Information</a></li>
+          <li><a href="#" class="login">My WMSU</a></li>
+        </ul>
+      </nav>
+    </header>
     <main>
-        
+      <div class="upload-submission-container">
+        <!-- Left sidebar with steps -->
+        <div class="steps-sidebar">
+          <h3 class="steps-title">Steps</h3>
+          <ul class="steps-list">
+            <li class="step-item" data-step="1">
+              <div class="step-number active" id="step1-number">1</div>
+              <div class="step-text">Grant Permission</div>
+            </li>
+            <li class="step-item" data-step="2">
+              <div class="step-number" id="step2-number">2</div>
+              <div class="step-text">Describe Work</div>
+            </li>
+            <li class="step-item" data-step="3">
+              <div class="step-number" id="step3-number">3</div>
+              <div class="step-text">Upload Files</div>
+            </li>
+            <li class="step-item" data-step="4">
+              <div class="step-number" id="step4-number">4</div>
+              <div class="step-text">Confirm Submission</div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Main content area -->
+        <div class="upload-main-content">
+          <!-- Step 1: Grant Permission -->
+          <div class="step-content active" id="step1-content">
+            <h2 class="content-title">University Permission Statement</h2>
+            <div class="permission-statement">
+              <p>
+                I hereby grant Western Mindanao State University (WMSU) a
+                non-exclusive, worldwide, royalty-free license to reproduce,
+                publish, and publicly distribute copies of this thesis or
+                dissertation in any format, subject to the provisions of
+                applicable laws, the university’s policies on intellectual
+                property, and any specific restrictions stated on the Title
+                Page. In particular, I grant WMSU the following rights:
+              </p>
+
+              <ul class="permission-rights">
+                <li>
+                  To upload and store a digital copy of the work in the WMSU
+                  Research Archive and other academic repositories managed by
+                  the university, accessible via the internet;
+                </li>
+                <li>
+                  To publish and disseminate the work through the official
+                  platforms of the university, including but not limited to
+                  college, institute, department, or university-level journals,
+                  in both print and electronic/digital formats;
+                </li>
+                <li>
+                  To provide open access to this work, allowing it to be used
+                  under the principle of "fair use" in accordance with the
+                  Intellectual Property Code of the Philippines (Republic Act
+                  No. 8293), particularly for purposes of education, research,
+                  and scholarship.
+                </li>
+              </ul>
+            </div>
+            <div class="permission-buttons">
+              <button class="btn btn-decline">I Decline</button>
+              <button class="btn btn-agree" id="step1-next">I Agree</button>
+            </div>
+          </div>
+
+          <!-- Step 2: Describe Work -->
+          <div class="step-content" id="step2-content">
+            <h2 class="content-title">College of Mass Communication</h2>
+            <h3>Describe Items</h3>
+            <form id="describe-form">
+              <div class="form-group">
+                <label class="form-label required">Personal Name:</label>
+                <div class="form-help">Personal name author</div>
+                <div style="display: flex; gap: 10px">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Name"
+                    style="flex: 1"
+                  />
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder=""
+                    style="flex: 2"
+                  />
+                  <button class="add-btn">+</button>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label required">Resource Title:</label>
+                <div class="form-help">Formal title of the resource</div>
+                <input type="text" class="form-control" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label required">Date of Submission:</label>
+                <div class="form-help">
+                  Date of formal issuance (e.g., publication) of the resource
+                </div>
+                <div style="display: flex; gap: 10px">
+                  <input
+                    type="text"
+                    class="form-control"
+                    value="2014"
+                    style="width: 80px"
+                  />
+                  <select class="form-control" style="width: 100px">
+                    <option selected>July</option>
+                  </select>
+                  <select class="form-control" style="width: 80px">
+                    <option>Day</option>
+                  </select>
+                  <div class="form-help" style="margin-top: 8px">
+                    Day - Optional
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Abstract:</label>
+                <div class="form-help">
+                  A summary of the content of the resource
+                </div>
+                <div class="abstract-box">
+                  <p>
+                    The archival appraisal practices in the Office of the
+                    Secretary to the Sangguniang Panlalawigan in Eastern Visayas
+                    were determined using a questionnaire and an informal
+                    interview. Five out of six personnel-in-charge of archival
+                    appraisal from the six provinces participated in this study.
+                    Results suggested that: (1) the personnel-in-charge of
+                    archival appraisal held different positions in the
+                    organization who perceived it as just one of their tasks;
+                    (2) knowledge on archival theories was considered most
+                    essential for archival appraisal which can be best acquired
+                    through training/workshops; (3) micro-appraisal, macro- and
+                    functional analysis, use analysis, precedents, and
+                    accessibility to users, and at times, the Jenkinsonian
+                    approach in archival appraisal though these were not
+                    guarantees that archival records were always selected; (4)
+                    not enough archival guidance and administrative support were
+                    mostly affecting their capabilities to do archival
+                    appraisal. They recommended that more support from within
+                    and among institutions, better understanding of records,
+                    application of information technology, guidelines or
+                    standards, more comprehensive policies and procedures,
+                    workshops and courses on archives could help them improve
+                    their local archival appraisal. The researcher recommended
+                    that they should come up with their own Records Disposition
+                    Schedule using the macro approach with emphasis on the
+                    context of records creation during appraisal.
+                  </p>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label required">Degree Course:</label>
+                <div class="form-help">Degree Course in the College</div>
+                <input
+                  type="text"
+                  class="form-control"
+                  value="Master of Library and Information Science"
+                />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Language:</label>
+                <div class="form-help">Language of content</div>
+                <select class="form-control">
+                  <option>English</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Keyword:</label>
+                <div class="form-help">
+                  Keywords to describe the content of the resource
+                </div>
+                <input type="text" class="form-control" />
+                <div class="keyword-tags">
+                  <div class="keyword-tag">
+                    archival appraisal <span class="tag-remove">×</span>
+                  </div>
+                  <div class="keyword-tag">
+                    WMSU-Archives <span class="tag-remove">×</span>
+                  </div>
+                  <div class="keyword-tag">
+                    Records Disposition Schedule
+                    <span class="tag-remove">×</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-buttons permission-buttons">
+                <button type="button" class="btn btn-cancel">Cancel</button>
+                <button type="button" class="btn btn-back" id="step2-back">
+                  Back
+                </button>
+                <button type="button" class="btn btn-save">Save & Exit</button>
+                <button type="button" class="btn btn-next" id="step2-next">
+                  Next
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Step 3: Upload Files -->
+          <div class="step-content" id="step3-content">
+            <h2 class="content-title">Upload Files</h2>
+
+            <div class="upload-section">
+              <div class="file-type">
+                <div class="file-icon">📄</div>
+                <div class="file-details">
+                  <div class="file-title">Pages with Signatures</div>
+                  <div class="file-description">
+                    Contains signatures of the author's thesis / dissertation
+                    panel stating that he/she has passed the requirements for
+                    the thesis/dissertation. In some instances, the grade is
+                    included.
+                  </div>
+                  <div class="file-size">296.75 KB</div>
+                </div>
+                <button class="btn-upload">+</button>
+              </div>
+
+              <div class="file-type">
+                <div class="file-icon">📄</div>
+                <div class="file-details">
+                  <div class="file-title">Preliminary Pages</div>
+                  <div class="file-description">
+                    Includes the Title, Abstract, Table of Contents, Permission
+                    Page, and other parts of the thesis / dissertation that is
+                    not part of the main text. This part is usually numbered in
+                    lower case roman numerals (except for the Title Page which
+                    is unnumbered, but is counted).
+                  </div>
+                  <div class="file-size">136.57 KB</div>
+                </div>
+                <button class="btn-upload">+</button>
+              </div>
+
+              <div class="file-type">
+                <div class="file-icon">📄</div>
+                <div class="file-details">
+                  <div class="file-title">Main Body</div>
+                  <div class="file-description">
+                    Includes the actual text of the thesis / dissertation,
+                    including the appendix and bibliography / references. These
+                    are numbered in arabic numerals.
+                  </div>
+                  <div class="file-size">2.80 MB</div>
+                </div>
+                <button class="btn-upload">+</button>
+              </div>
+            </div>
+
+            <h3>Accompanying File(s)</h3>
+            <div class="upload-placeholder">
+              <div>[empty]</div>
+              <button class="btn-upload">+</button>
+            </div>
+
+            <div class="form-buttons permission-buttons">
+              <button type="button" class="btn btn-cancel">Cancel</button>
+              <button type="button" class="btn btn-back" id="step3-back">
+                Back
+              </button>
+              <button type="button" class="btn btn-save">Save & Exit</button>
+              <button type="button" class="btn btn-next" id="step3-next">
+                Next
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 4: Confirm Submission -->
+          <div class="step-content" id="step4-content">
+            <h2 class="content-title">Confirm Submission</h2>
+
+            <div class="notification-message">
+              The system will be sending you notifications regarding your
+              account; please do not mark emails from wmsu-archives@wmsu.edu.ph
+              as SPAM. Also, periodically check your spam folders as our email
+              might be diverted there. In that case, please unmark those emails
+              as NOT SPAM.
+            </div>
+
+            <div class="form-group">
+              <h3>Author(s):</h3>
+              <table>
+                <tr>
+                  <th>Author's name</th>
+                  <th>Author's email</th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td><button class="add-btn">+</button></td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="form-group">
+              <h3>Adviser(s):</h3>
+              <table>
+                <tr>
+                  <th>Adviser's name</th>
+                  <th>Adviser's email</th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td><button class="add-btn">+</button></td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="form-buttons permission-buttons">
+              <button type="button" class="btn btn-cancel">Cancel</button>
+              <button type="button" class="btn btn-back" id="step4-back">
+                Back
+              </button>
+              <button type="button" class="btn btn-save">Save & Exit</button>
+              <button type="button" class="btn btn-confirm" id="step4-next">
+                Confirm
+              </button>
+            </div>
+          </div>
+
+          <!-- Success Message (displayed after step 4) -->
+          <div class="step-content" id="success-content">
+            <h2 class="content-title">Confirm Submission</h2>
+
+            <div class="confirmation-message">
+              <h3>Congratulations for successfully uploading your work!</h3>
+              <p>
+                Wait for confirmation from the library that your
+                thesis/dissertation has been accepted. You will receive an email
+                once your submission has been approved. If corrections or
+                adjustments are required, instructions will be sent to your
+                email account. Once any adjustments or corrections have been
+                completed, you can log back into the ETD account and replace the
+                necessary corrections.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
-</body>
+    <!-- <footer class="beyond-footer">
+      <div class="beyond-footer-bottom">
+        <span>©2025 WMSU-Archives - All rights reserved</span>
+        <div class="beyond-footer-links">
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+
+      </div>
+    </footer> -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get all step contents
+        const stepContents = document.querySelectorAll(".step-content");
+        const stepNumbers = document.querySelectorAll(".step-number");
+        const stepItems = document.querySelectorAll(".step-item");
+
+        // Track highest completed step
+        let highestCompletedStep = 0;
+
+        // Function to show a specific step
+        function showStep(stepIndex) {
+          // Hide all steps
+          stepContents.forEach((content) => {
+            content.classList.remove("active");
+          });
+
+          // Remove active class from all step numbers
+          stepNumbers.forEach((number) => {
+            number.classList.remove("active");
+          });
+
+          // Show the selected step
+          if (stepIndex <= 4) {
+            document
+              .getElementById(`step${stepIndex}-content`)
+              .classList.add("active");
+            document
+              .getElementById(`step${stepIndex}-number`)
+              .classList.add("active");
+
+            // Mark previous steps as completed
+            for (let i = 1; i < stepIndex; i++) {
+              document
+                .getElementById(`step${i}-number`)
+                .classList.add("completed");
+            }
+
+            // Update highest completed step if needed
+            if (stepIndex > highestCompletedStep) {
+              highestCompletedStep = stepIndex - 1;
+            }
+          } else {
+            // For success page
+            document.getElementById("success-content").classList.add("active");
+            // Mark all steps as completed
+            for (let i = 1; i <= 4; i++) {
+              document
+                .getElementById(`step${i}-number`)
+                .classList.add("completed");
+            }
+            highestCompletedStep = 4;
+          }
+        }
+
+        // Add event listeners for next buttons
+        document
+          .getElementById("step1-next")
+          .addEventListener("click", function () {
+            showStep(2);
+          });
+
+        document
+          .getElementById("step2-next")
+          .addEventListener("click", function () {
+            showStep(3);
+          });
+
+        document
+          .getElementById("step3-next")
+          .addEventListener("click", function () {
+            showStep(4);
+          });
+
+        document
+          .getElementById("step4-next")
+          .addEventListener("click", function () {
+            showStep(5); // Show success message
+          });
+
+        // Add event listeners for back buttons
+        document
+          .getElementById("step2-back")
+          .addEventListener("click", function () {
+            showStep(1);
+          });
+
+        document
+          .getElementById("step3-back")
+          .addEventListener("click", function () {
+            showStep(2);
+          });
+
+        document
+          .getElementById("step4-back")
+          .addEventListener("click", function () {
+            showStep(3);
+          });
+
+        // Make step numbers in sidebar clickable to navigate to previous steps
+        stepItems.forEach((item) => {
+          item.addEventListener("click", function () {
+            const stepToShow = parseInt(this.dataset.step);
+
+            // Only allow navigating to completed steps or the next step in sequence
+            if (stepToShow <= highestCompletedStep + 1) {
+              showStep(stepToShow);
+            }
+          });
+        });
+      });
+    </script>
+  </body>
 </html>
