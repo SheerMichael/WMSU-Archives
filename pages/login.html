@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <title>Login Page</title>
+  </head>
+  <body>
+    <main class="wmsu-login-main">
+      <div class="wmsu-login-container">
+        <img
+          src="..\assets\img\logo.png"
+          alt="WMSU Logo"
+          class="wmsu-login-logo"
+        />
+
+        <form class="wmsu-login-form">
+          <h2>Login</h2>
+
+          <input
+            type="text"
+            placeholder="Username"
+            class="wmsu-login-input"
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            class="wmsu-login-input"
+            required
+          />
+
+          <a href="#" class="wmsu-forgot-password">Forgot Password?</a>
+
+          <button type="submit" class="wmsu-login-button">Log In</button>
+        </form>
+      </div>
+    </main>
+    <script>
+      $(document).ready(function () {
+        // When the login form is submitted
+        $(".wmsu-login-form").submit(function (event) {
+          // Prevent the default form submission
+          event.preventDefault();
+
+          // Get the input values
+          const username = $(this).find('input[type="text"]').val().trim();
+          const password = $(this).find('input[type="password"]').val().trim();
+
+          // Basic validation
+          if (username === "" || password === "") {
+            alert("Please enter both username and password.");
+            return;
+          }
+
+          // Here you would typically make an AJAX request to validate login credentials
+          // For example:
+          /*
+    $.ajax({
+      url: "your-login-api-endpoint",
+      type: "POST",
+      data: {
+        username: username,
+        password: password
+      },
+      success: function(response) {
+        if (response.success) {
+          window.location.href = "upload.html";
+        } else {
+          alert("Invalid credentials. Please try again.");
+        }
+      },
+      error: function() {
+        alert("Login failed. Please try again later.");
+      }
+    });
+    */
+
+          // For now, just redirect to upload.html without validation
+          // Remove this line when you implement actual authentication
+          window.location.href = "upload.html";
+        });
+
+        // Optional: Handle "Forgot Password" click
+        $(".wmsu-forgot-password").click(function (event) {
+          event.preventDefault();
+          // Add your forgot password functionality here
+          alert("Forgot password functionality will be implemented here.");
+        });
+      });
+    </script>
+  </body>
+</html>
