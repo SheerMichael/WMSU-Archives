@@ -36,10 +36,9 @@
       </nav>
       <nav class="navbar2">
         <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="#">Resources</a></li>
+          <li><a href="..\pages\user.html">Home</a></li>
+          <li><a href="pages\category.html">Resources</a></li>
           <li><a href="#">Information</a></li>
-          <li><a href="#" class="login">My WMSU</a></li>
         </ul>
       </nav>
     </header>
@@ -229,16 +228,65 @@ This research could convince school administrations that comic books and graphic
                 <label class="form-label required">Degree Course:</label>
                 <div class="form-help">Degree Course in the College</div>
                 <div style="position: relative">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="degree-course"
-                    value="Master of Library and Information Science"
-                    required
-                  />
+                  <select class="form-control" id="degree-course" required>
+                    <option value="" disabled selected>Select your degree course</option>
+                    
+                    <!-- College of Teacher Education -->
+                    <option value="Bachelor of Elementary Education">Bachelor of Elementary Education</option>
+                    <option value="Bachelor of Secondary Education">Bachelor of Secondary Education</option>
+                    <option value="Bachelor of Technology and Livelihood Education">Bachelor of Technology and Livelihood Education</option>
+                    <option value="Bachelor of Early Childhood Education">Bachelor of Early Childhood Education</option>
+                    <option value="Bachelor of Special Needs Education">Bachelor of Special Needs Education</option
+              
+                    <!-- College of Social Sciences and Humanities -->
+                    <option value="BA in English Language Studies">BA in English Language Studies</option>
+                    <option value="BA in Communication">BA in Communication</option>
+                    <option value="BA in Political Science">BA in Political Science</option>
+                    <option value="BA in History">BA in History</option>
+              
+                    <!-- College of Engineering and Technology -->
+                    <option value="BS in Civil Engineering">BS in Civil Engineering</option>
+                    <option value="BS in Electrical Engineering">BS in Electrical Engineering</option>
+                    <option value="BS in Computer Engineering">BS in Computer Engineering</option>
+                    <option value="BS in Mechanical Engineering">BS in Mechanical Engineering</option
+              
+                    <!-- College of Agriculture -->
+                    <option value="BS in Agriculture">BS in Agriculture</option>
+                    <option value="BS in Agroforestry">BS in Agroforestry</option>
+                    <option value="BS in Forestry">BS in Forestry</option>
+              
+                    <!-- College of Nursing -->
+                    <option value="BS in Nursing">BS in Nursing</option>
+                    <option value="BS in Nutrition and Dietetics">BS in Nutrition and Dietetics</option>
+              
+                    <!-- College of Science and Mathematics -->
+                    <option value="BS in Biology">BS in Biology</option>
+                    <option value="BS in Chemistry">BS in Chemistry</option>
+                    <option value="BS in Mathematics">BS in Mathematics</option>
+                    <option value="BS in Physics">BS in Physics</option>
+                    <option value="BS in Environmental Science">BS in Environmental Science</option>
+              
+                    <!-- College of Information and Communication Technology -->
+                    <option value="BS in Information Technology">BS in Information Technology</option>
+                    <option value="BS in Computer Science">BS in Computer Science</option>
+              
+                    <!-- College of Business and Accountancy -->
+                    <option value="BS in Accountancy">BS in Accountancy</option>
+                    <option value="BS in Business Administration">BS in Business Administration</option>
+                    <option value="BS in Management Accounting">BS in Management Accounting</option>
+                    <option value="BS in Hospitality Management">BS in Hospitality Management</option>
+              
+                    <!-- College of Architecture -->
+                    <option value="BS in Architecture">BS in Architecture</option>
+              
+                    <!-- Institute of Islamic Studies -->
+                    <option value="BA in Islamic Studies">BA in Islamic Studies</option>
+              
+                  </select>
                   <div class="error-message">Degree Course is required</div>
                 </div>
               </div>
+              
 
               <div class="form-group">
                 <label class="form-label">Language:</label>
