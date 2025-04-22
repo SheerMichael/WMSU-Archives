@@ -482,10 +482,10 @@ nav a {
 .featured-authors {
   /* center & constrain */
   max-width: 1200px;
-  margin: 0 auto;
   padding-right: 60px;
   padding-left: 60px;
-  margin: 40px 0 40px 0;
+  margin: 80px 0 80px 0;
+  gap: 20px;
 }
 
 .featured-authors h2 {
@@ -496,7 +496,7 @@ nav a {
 /* use CSS Grid for equal columns & automatic wrapping */
 .author-div {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 12px;
   align-items: start;
 }
