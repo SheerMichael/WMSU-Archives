@@ -162,7 +162,7 @@ nav a {
   flex: 1 1 240px;
   max-width: 280px;
   background: #fff;
-  border: 1px solid #de7c5a;
+  border: 1px solid #b10f2e;
   border-radius: 4px;
   padding: 20px;
   text-align: center;
@@ -184,7 +184,7 @@ nav a {
   width: 60px;
   height: 60px;
   background: #fff;
-  border: 1px solid #de7c5a;
+  border: 1px solid #b10f2e;
   border-radius: 4px;
   display: flex;
   align-items: center;
@@ -212,7 +212,7 @@ nav a {
   display: block;
   width: 140px;
   height: 2px;
-  background: #de7c5a;
+  background: #b10f2e;
   margin: 10px auto 0;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -227,7 +227,7 @@ nav a {
 
 /* Hover states all synchronized at 0.3s */
 .etd-process-card:hover .etd-icon-container {
-  background-color: #de7c5a;
+  background-color: #b10f2e;
   border-color: #fff;
 }
 .etd-process-card:hover .etd-icon {
@@ -700,33 +700,52 @@ nav a {
 
 /* CATEGORY LIST */
 
-.row {
-  margin-left: 15px;
-  margin-right: 15px;
+.collections-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.container {
-  width: 1125px;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+.category-heading {
+  color: #555;
+  font-size: 22px;
+  margin-bottom: 10px;
 }
 
-#header {
-  background: #fff;
+.underline-indicator {
+  display: block;
+  width: 220px;
+  height: 3px;
+  background-color: #f0c053;
+  margin-bottom: 30px;
 }
 
-#info-bar {
-  background: rgb(255, 47, 47);
-  color: #fff;
-  padding: 4px 0 3px;
-}
-
-#logo-bar {
+.collection-list {
+  list-style-type: none;
   padding: 0;
-  border-top: 1px solid #fff;
-  background: rgb(221, 50, 50);
+}
+
+.collection-item {
+  margin-bottom: 25px;
+}
+
+.collection-title {
+  color: #4682b4;
+  font-size: 17px;
+  text-decoration: none;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.collection-description {
+  color: #666;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.count-indicator {
+  color: #777;
 }
 
 /* CATEGORY LIST */
