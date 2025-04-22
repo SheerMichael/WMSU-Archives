@@ -57,32 +57,17 @@
             return;
           }
 
-          // Here you would typically make an AJAX request to validate login credentials
-          // For example:
-          /*
-    $.ajax({
-      url: "your-login-api-endpoint",
-      type: "POST",
-      data: {
-        username: username,
-        password: password
-      },
-      success: function(response) {
-        if (response.success) {
-          window.location.href = "upload.html";
-        } else {
-          alert("Invalid credentials. Please try again.");
-        }
-      },
-      error: function() {
-        alert("Login failed. Please try again later.");
-      }
-    });
-    */
-
-          // For now, just redirect to upload.html without validation
-          // Remove this line when you implement actual authentication
-          window.location.href = "upload.html";
+          // Check credentials and redirect accordingly
+          if (username === "user" && password === "user") {
+            // User login - redirect to upload.html
+            window.location.href = "upload.html";
+          } else if (username === "admin" && password === "admin") {
+            // Admin login - redirect to admin.html
+            window.location.href = "admin.html";
+          } else {
+            // Invalid credentials
+            alert("Invalid credentials. Please try again.");
+          }
         });
 
         // Optional: Handle "Forgot Password" click
