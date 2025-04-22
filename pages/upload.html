@@ -6,6 +6,23 @@
     <link rel="icon" type="image/x-icon" href="..\assets\img\logo.png" />
     <link rel="stylesheet" href="../assets/css/styles.css" />
     <title>WMSU-Archives</title>
+    <style>
+      /* Add some basic styling for form validation */
+      .form-control:invalid {
+        border: 1px solid red;
+      }
+
+      .error-message {
+        color: red;
+        font-size: 0.8em;
+        margin-top: 5px;
+        display: none;
+      }
+
+      .form-control:invalid + .error-message {
+        display: block;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -62,7 +79,7 @@
                 non-exclusive, worldwide, royalty-free license to reproduce,
                 publish, and publicly distribute copies of this thesis or
                 dissertation in any format, subject to the provisions of
-                applicable laws, the university’s policies on intellectual
+                applicable laws, the university's policies on intellectual
                 property, and any specific restrictions stated on the Title
                 Page. In particular, I grant WMSU the following rights:
               </p>
@@ -96,33 +113,47 @@
 
           <!-- Step 2: Describe Work -->
           <div class="step-content" id="step2-content">
-            <h2 class="content-title">College of Mass Communication</h2>
-            <h3>Describe Items</h3>
             <form id="describe-form">
               <div class="form-group">
                 <label class="form-label required">Personal Name:</label>
                 <div class="form-help">Personal name author</div>
                 <div style="display: flex; gap: 10px">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Name"
-                    style="flex: 1"
-                  />
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder=""
-                    style="flex: 2"
-                  />
-                  <button class="add-btn">+</button>
+                  <div style="flex: 1; position: relative">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="first-name"
+                      placeholder="First Name"
+                      required
+                    />
+                    <div class="error-message">First Name is required</div>
+                  </div>
+                  <div style="flex: 2; position: relative">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="last-name"
+                      placeholder="Last Name"
+                      required
+                    />
+                    <div class="error-message">Last Name is required</div>
+                  </div>
+                  <button type="button" class="add-btn">+</button>
                 </div>
               </div>
 
               <div class="form-group">
                 <label class="form-label required">Resource Title:</label>
                 <div class="form-help">Formal title of the resource</div>
-                <input type="text" class="form-control" />
+                <div style="position: relative">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="resource-title"
+                    required
+                  />
+                  <div class="error-message">Resource Title is required</div>
+                </div>
               </div>
 
               <div class="form-group">
@@ -131,17 +162,44 @@
                   Date of formal issuance (e.g., publication) of the resource
                 </div>
                 <div style="display: flex; gap: 10px">
-                  <input
-                    type="text"
+                  <div style="position: relative; width: 80px">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="submission-year"
+                      value="2014"
+                      required
+                    />
+                    <div class="error-message">Year is required</div>
+                  </div>
+                  <div style="position: relative; width: 100px">
+                    <select class="form-control" id="submission-month" required>
+                      <option value="" disabled>Month</option>
+                      <option value="January">January</option>
+                      <option value="February">February</option>
+                      <option value="March">March</option>
+                      <option value="April">April</option>
+                      <option value="May">May</option>
+                      <option value="June">June</option>
+                      <option selected value="July">July</option>
+                      <option value="August">August</option>
+                      <option value="September">September</option>
+                      <option value="October">October</option>
+                      <option value="November">November</option>
+                      <option value="December">December</option>
+                    </select>
+                    <div class="error-message">Month is required</div>
+                  </div>
+                  <select
                     class="form-control"
-                    value="2014"
                     style="width: 80px"
-                  />
-                  <select class="form-control" style="width: 100px">
-                    <option selected>July</option>
-                  </select>
-                  <select class="form-control" style="width: 80px">
-                    <option>Day</option>
+                    id="submission-day"
+                  >
+                    <option value="">Day - Optional</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <!-- Add other days -->
+                    <option value="31">31</option>
                   </select>
                   <div class="form-help" style="margin-top: 8px">
                     Day - Optional
@@ -156,33 +214,39 @@
                 </div>
                 <div class="abstract-box">
                   <textarea class="StepsInput" rows="10">
-                    People nowadays can choose assorted types of entertainment through different forms of media. Comic books and graphic novels fall short in terms of educational value compared to reference materials in school libraries. This study, therefore, seeks to develop an encompassing collection development policy that aims to include comic books and graphic novels in the library collection in consonance with the preference of young adults in Malabón City which are St. Therese of the Child Jesus Academy, Philippine Malabon Institute, and St. James Academy.
-                    
-                    The research instruments involved in this study are a survey questionnaire to know the information needs of the students regarding comics and structured interviews to determine the perceptions of the head librarians on the acquisition of comics in their libraries. A total of 161 students were given the survey questionnaires throughout the three schools. The librarians answered structured interviews from each institution.
-                    
-                    The data gathered from the survey questionnaire and the structured interviews revealed that: (a) 21.6% of the respondents show that comedy/humor s the preferred genre by the students, (b) 31.6% of the respondents prefer comic books as their format, (c) 42.8% of the responses show that leisure is the primary purpose why students read comics, (d) 96.9% of the students that were surveyed agree to the inclusion of comic books and graphic novels in their libraries, (e) The head librarian of faculty in charge is not familiar with Eisner's Standards for comics in school libraries, (f) School libraries invest more in acquiring reference materials compared to comic books and graphic novels, (g) their holdings vary independently.
-                    
-                    This research could convince school administrations that comic books and graphic novels are as essential as other resource materials within their library. It would also prepare the library staff to introduce these materials as educational tools to the institution's educators and students.
-                                        </textarea
-                  >
+People nowadays can choose assorted types of entertainment through different forms of media. Comic books and graphic novels fall short in terms of educational value compared to reference materials in school libraries. This study, therefore, seeks to develop an encompassing collection development policy that aims to include comic books and graphic novels in the library collection in consonance with the preference of young adults in Malabón City which are St. Therese of the Child Jesus Academy, Philippine Malabon Institute, and St. James Academy.
+
+The research instruments involved in this study are a survey questionnaire to know the information needs of the students regarding comics and structured interviews to determine the perceptions of the head librarians on the acquisition of comics in their libraries. A total of 161 students were given the survey questionnaires throughout the three schools. The librarians answered structured interviews from each institution.
+
+The data gathered from the survey questionnaire and the structured interviews revealed that: (a) 21.6% of the respondents show that comedy/humor s the preferred genre by the students, (b) 31.6% of the respondents prefer comic books as their format, (c) 42.8% of the responses show that leisure is the primary purpose why students read comics, (d) 96.9% of the students that were surveyed agree to the inclusion of comic books and graphic novels in their libraries, (e) The head librarian of faculty in charge is not familiar with Eisner's Standards for comics in school libraries, (f) School libraries invest more in acquiring reference materials compared to comic books and graphic novels, (g) their holdings vary independently.
+
+This research could convince school administrations that comic books and graphic novels are as essential as other resource materials within their library. It would also prepare the library staff to introduce these materials as educational tools to the institution's educators and students.
+                  </textarea>
                 </div>
               </div>
 
               <div class="form-group">
                 <label class="form-label required">Degree Course:</label>
                 <div class="form-help">Degree Course in the College</div>
-                <input
-                  type="text"
-                  class="form-control"
-                  value="Master of Library and Information Science"
-                />
+                <div style="position: relative">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="degree-course"
+                    value="Master of Library and Information Science"
+                    required
+                  />
+                  <div class="error-message">Degree Course is required</div>
+                </div>
               </div>
 
               <div class="form-group">
                 <label class="form-label">Language:</label>
                 <div class="form-help">Language of content</div>
-                <select class="form-control">
-                  <option>English</option>
+                <select class="form-control" id="language">
+                  <option value="English">English</option>
+                  <option value="Filipino">Filipino</option>
+                  <option value="Spanish">Spanish</option>
                 </select>
               </div>
 
@@ -191,7 +255,7 @@
                 <div class="form-help">
                   Keywords to describe the content of the resource
                 </div>
-                <input type="text" class="form-control" />
+                <input type="text" class="form-control" id="keyword-input" />
                 <div class="keyword-tags">
                   <div class="keyword-tag">
                     archival appraisal <span class="tag-remove">×</span>
@@ -236,7 +300,17 @@
                   </div>
                   <div class="file-size">296.75 KB</div>
                 </div>
-                <button class="btn-upload">+</button>
+                <input
+                  type="file"
+                  id="signatures-file"
+                  class="hidden-file-input"
+                />
+                <button
+                  class="btn-upload"
+                  onclick="document.getElementById('signatures-file').click()"
+                >
+                  +
+                </button>
               </div>
 
               <div class="file-type">
@@ -252,7 +326,17 @@
                   </div>
                   <div class="file-size">136.57 KB</div>
                 </div>
-                <button class="btn-upload">+</button>
+                <input
+                  type="file"
+                  id="preliminary-file"
+                  class="hidden-file-input"
+                />
+                <button
+                  class="btn-upload"
+                  onclick="document.getElementById('preliminary-file').click()"
+                >
+                  +
+                </button>
               </div>
 
               <div class="file-type">
@@ -266,13 +350,27 @@
                   </div>
                   <div class="file-size">2.80 MB</div>
                 </div>
-                <button class="btn-upload">+</button>
+                <input
+                  type="file"
+                  id="main-body-file"
+                  class="hidden-file-input"
+                />
+                <button
+                  class="btn-upload"
+                  onclick="document.getElementById('main-body-file').click()"
+                >
+                  +
+                </button>
               </div>
             </div>
 
             <h3>Accompanying File(s)</h3>
             <div class="upload-placeholder">
-              <input type="file" name="" id="" />
+              <input
+                type="file"
+                name="accompanying-file"
+                id="accompanying-file"
+              />
             </div>
 
             <div class="form-buttons permission-buttons">
@@ -289,58 +387,92 @@
 
           <!-- Step 4: Confirm Submission -->
           <div class="step-content" id="step4-content">
-            <h2 class="content-title">Confirm Submission</h2>
+            <form id="confirm-form">
+              <h2 class="content-title">Confirm Submission</h2>
 
-            <div class="notification-message">
-              The system will be sending you notifications regarding your
-              account; please do not mark emails from wmsu-archives@wmsu.edu.ph
-              as SPAM. Also, periodically check your spam folders as our email
-              might be diverted there. In that case, please unmark those emails
-              as NOT SPAM.
-            </div>
+              <div class="notification-message">
+                The system will be sending you notifications regarding your
+                account; please do not mark emails from
+                wmsu-archives@wmsu.edu.ph as SPAM. Also, periodically check your
+                spam folders as our email might be diverted there. In that case,
+                please unmark those emails as NOT SPAM.
+              </div>
 
-            <div class="form-group">
-              <h3>Author(s):</h3>
-              <table>
-                <tr>
-                  <th>Author's name</th>
-                  <th>Author's email</th>
-                  <th></th>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td><button class="add-btn">+</button></td>
-                </tr>
-              </table>
-            </div>
+              <div class="form-group">
+                <h3>Author(s):</h3>
+                <table>
+                  <tr>
+                    <th>Author's name</th>
+                    <th>Author's email</th>
+                    <th></th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="author-name"
+                        required
+                      />
+                      <div class="error-message">Author name is required</div>
+                    </td>
+                    <td>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="author-email"
+                        required
+                      />
+                      <div class="error-message">Valid email is required</div>
+                    </td>
+                    <td><button type="button" class="add-btn">+</button></td>
+                  </tr>
+                </table>
+              </div>
 
-            <div class="form-group">
-              <h3>Adviser(s):</h3>
-              <table>
-                <tr>
-                  <th>Adviser's name</th>
-                  <th>Adviser's email</th>
-                  <th></th>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td><button class="add-btn">+</button></td>
-                </tr>
-              </table>
-            </div>
+              <div class="form-group">
+                <h3>Adviser(s):</h3>
+                <table>
+                  <tr>
+                    <th>Adviser's name</th>
+                    <th>Adviser's email</th>
+                    <th></th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="adviser-name"
+                        required
+                      />
+                      <div class="error-message">Adviser name is required</div>
+                    </td>
+                    <td>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="adviser-email"
+                        required
+                      />
+                      <div class="error-message">Valid email is required</div>
+                    </td>
+                    <td><button type="button" class="add-btn">+</button></td>
+                  </tr>
+                </table>
+              </div>
 
-            <div class="form-buttons permission-buttons">
-              <button type="button" class="btn btn-cancel">Cancel</button>
-              <button type="button" class="btn btn-back" id="step4-back">
-                Back
-              </button>
-              <button type="button" class="btn btn-save">Save & Exit</button>
-              <button type="button" class="btn btn-confirm" id="step4-next">
-                Confirm
-              </button>
-            </div>
+              <div class="form-buttons permission-buttons">
+                <button type="button" class="btn btn-cancel">Cancel</button>
+                <button type="button" class="btn btn-back" id="step4-back">
+                  Back
+                </button>
+                <button type="button" class="btn btn-save">Save & Exit</button>
+                <button type="button" class="btn btn-confirm" id="step4-next">
+                  Confirm
+                </button>
+              </div>
+            </form>
           </div>
 
           <!-- Success Message (displayed after step 4) -->
@@ -363,17 +495,27 @@
         </div>
       </div>
     </main>
-    <!-- <footer class="beyond-footer">
-      <div class="beyond-footer-bottom">
-        <span>©2025 WMSU-Archives - All rights reserved</span>
-        <div class="beyond-footer-links">
-          <a href="#">Terms & Conditions</a>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Cookie Policy</a>
-        </div>
 
-      </div>
-    </footer> -->
+    <style>
+      /* Additional styles for file inputs */
+      .hidden-file-input {
+        display: none;
+      }
+
+      /* Style for selected files */
+      .file-selected {
+        background-color: #e8f5e9;
+      }
+
+      /* Style for file name display */
+      .file-name {
+        font-size: 0.8em;
+        margin-top: 5px;
+        color: #4caf50;
+        display: none;
+      }
+    </style>
+
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         // Get all step contents
@@ -429,7 +571,59 @@
           }
         }
 
-        // Add event listeners for next buttons
+        // Function to validate form fields
+        function validateForm(formId) {
+          const form = document.getElementById(formId);
+          const requiredInputs = form.querySelectorAll("[required]");
+          let isValid = true;
+
+          requiredInputs.forEach((input) => {
+            if (!input.value.trim()) {
+              input.classList.add("invalid");
+              isValid = false;
+            } else {
+              input.classList.remove("invalid");
+            }
+
+            // For email validation
+            if (input.type === "email" && input.value.trim()) {
+              const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+              if (!emailRegex.test(input.value.trim())) {
+                input.classList.add("invalid");
+                isValid = false;
+              }
+            }
+          });
+
+          return isValid;
+        }
+
+        // Add event listeners for file inputs
+        const fileInputs = document.querySelectorAll('input[type="file"]');
+        fileInputs.forEach((input) => {
+          input.addEventListener("change", function () {
+            if (this.files.length > 0) {
+              // Add visual feedback that file was selected
+              const fileType = this.closest(".file-type");
+              if (fileType) {
+                fileType.classList.add("file-selected");
+
+                // Create or update file name display
+                let fileNameDisplay = fileType.querySelector(".file-name");
+                if (!fileNameDisplay) {
+                  fileNameDisplay = document.createElement("div");
+                  fileNameDisplay.className = "file-name";
+                  fileType.appendChild(fileNameDisplay);
+                }
+
+                fileNameDisplay.textContent = this.files[0].name;
+                fileNameDisplay.style.display = "block";
+              }
+            }
+          });
+        });
+
+        // Add event listeners for next buttons with validation
         document
           .getElementById("step1-next")
           .addEventListener("click", function () {
@@ -439,19 +633,30 @@
         document
           .getElementById("step2-next")
           .addEventListener("click", function () {
-            showStep(3);
+            if (validateForm("describe-form")) {
+              showStep(3);
+            } else {
+              alert("Please fill in all required fields before proceeding.");
+            }
           });
 
         document
           .getElementById("step3-next")
           .addEventListener("click", function () {
+            // Since file uploads are optional, we can proceed directly
             showStep(4);
           });
 
         document
           .getElementById("step4-next")
           .addEventListener("click", function () {
-            showStep(5); // Show success message
+            if (validateForm("confirm-form")) {
+              showStep(5); // Show success message
+            } else {
+              alert(
+                "Please fill in all required author and adviser information before confirming."
+              );
+            }
           });
 
         // Add event listeners for back buttons
