@@ -1,0 +1,249 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background-color: #f4f6f8;
+  display: flex;
+  min-height: 100vh;
+}
+
+.dashboard-container {
+  display: flex;
+  width: 100%;
+}
+
+.sidebar {
+  background-color: #2c3e50;
+  color: #fff;
+  width: 280px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  background-color: #34495e;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.admin-details .name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.navigation {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation li a {
+  display: block;
+  padding: 14px 15px;
+  text-decoration: none;
+  color: #bdc3c7;
+  transition: background-color 0.3s ease;
+}
+
+.navigation li a:hover {
+  background-color: #34495e;
+}
+
+.navigation li.active a {
+  background-color: #34495e;
+  color: #fff;
+  font-weight: bold;
+}
+
+.main-content {
+  flex-grow: 1; /* Crucial for taking up remaining width */
+  padding: 20px;
+  overflow-x: auto;
+}
+/* Specific styles for the User Management page */
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header-actions .button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.header-actions .button i {
+  margin-right: 8px;
+}
+
+.header-actions .button.primary {
+  background-color: #2ecc71;
+}
+
+.header-actions .button.secondary {
+  background-color: #3498db;
+}
+
+.content-area {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.filters-bar {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.search-input {
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 8px;
+  width: 300px;
+  align-items: center;
+}
+
+.search-input input[type="text"] {
+  border: none;
+  padding: 8px;
+  width: 100%;
+  outline: none;
+}
+
+.search-input i {
+  color: #777;
+  margin-left: 8px;
+}
+
+.select-filter {
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.select-filter select {
+  padding: 10px 30px 10px 10px;
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  width: 150px;
+  outline: none;
+}
+
+.select-filter i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+  pointer-events: none;
+}
+
+.users-list-section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.users-list-section th,
+.users-list-section td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.users-list-section th {
+  font-weight: bold;
+  color: #555;
+}
+
+.users-list-section tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.users-list-section td input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.users-list-section td .status {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.users-list-section td .status.active {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.users-list-section td .status.inactive {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.users-list-section td .status.pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.users-list-section td i.fa-ellipsis-v {
+  color: #777;
+  cursor: pointer;
+}
+
+.users-list-section .pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  color: #777;
+  font-size: 0.9em;
+}
+
+.users-list-section .pagination .page-numbers button {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  margin-left: 5px;
+  cursor: pointer;
+  background-color: white;
+  color: #555;
+}
+
+.users-list-section .pagination .page-numbers button.active {
+  background-color: #3498db;
+  color: white;
+  border-color: #3498db;
+}
+
+.users-list-section .pagination .page-numbers button.next {
+  background-color: #f4f6f8;
+}

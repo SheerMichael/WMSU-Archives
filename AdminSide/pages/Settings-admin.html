@@ -4,57 +4,119 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Settings</title>
-    <link rel="stylesheet" href="../css/styles-admin.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="settings.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="../css/settings.css" />
   </head>
   <body>
-    <header>
-      <div class="burger">
-        <div class="lines"></div>
-        <div class="lines"></div>
-        <div class="lines"></div>
-      </div>
-      <nav class="nav-desktop">
-        <div class="nav-empty"></div>
-        <ul class="nav_logo">
-          <li><a href="../index-admin.html">WMSU ADMIN</a></li>
+    <div class="dashboard-container">
+      <aside class="sidebar">
+        <div class="user-info">
+          <div class="avatar"></div>
+          <div class="admin-details">
+            <div class="name">Admin User</div>
+            <div class="role">Administrator</div>
+          </div>
+        </div>
+        <ul class="navigation">
+          <li><a href="../index-admin.html">Dashboard</a></li>
+          <li><a href="papersManagement-admin.html">Papers Management</a></li>
+          <li><a href="userManagement-admin.html">User Management</a></li>
+          <li><a href="departments-admin.html">Departments</a></li>
+          <li><a href="analytics-admin.html">Analytics</a></li>
+          <li class="active"><a href="#">Settings</a></li>
+          <li><a href="../../pages/login.html">Logout</a></li>
         </ul>
-        <ul class="nav_profile">
-          <li><a href="#" class="fa-solid fa-bell"></a></li>
-          <li><a href="#" class="fa-solid fa-user"></a></li>
-        </ul>
-      </nav>
-      <nav class="nav-mobile d-none">
-        <ul class="aside_nav">
-          <li><a href="../index-admin.html">📚Dashboard</a></li>
-          <li><a href="userManagement-admin.html">👤User Management</a></li>
-          <li><a href="#">⚙️Settings</a></li>
-          <li><a href="../../pages/login.html">⤵️Logout</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <div id="main_container">
-      <aside>
-        <nav class="aside-desktop">
-          <ul class="aside_nav">
-            <li><a href="../index-admin.html">📚Dashboard</a></li>
-            <li><a href="userManagement-admin.html">👤User Management</a></li>
-            <li><a href="#">⚙️Settings</a></li>
-            <li><a href="../../pages/login.html">⤵️Logout</a></li>
-          </ul>
-        </nav>
       </aside>
-      <main>
-        <h1>Settings</h1>
-        <section class="main_section1"></section>
+      <main class="main-content">
+        <header class="page-header">
+          <h1>Settings</h1>
+        </header>
+        <div class="content-area">
+          <div class="settings-section">
+            <h2>General Settings</h2>
+            <form>
+              <div class="form-group">
+                <label for="site-title">Site Title</label>
+                <input
+                  type="text"
+                  id="site-title"
+                  value="My Academic Platform"
+                />
+              </div>
+              <div class="form-group">
+                <label for="default-language">Default Language</label>
+                <select id="default-language">
+                  <option value="en">English</option>
+                  <option value="es">Spanish</option>
+                  <option value="fr">French</option>
+                </select>
+              </div>
+              <button type="submit" class="button primary">
+                Save General Settings
+              </button>
+            </form>
+          </div>
+
+          <div class="settings-section">
+            <h2>User Management Settings</h2>
+            <form>
+              <div class="form-group">
+                <label for="registration-enabled"
+                  >Enable User Registration</label
+                >
+                <input type="checkbox" id="registration-enabled" checked />
+              </div>
+              <div class="form-group">
+                <label for="default-role">Default New User Role</label>
+                <select id="default-role">
+                  <option value="user">User</option>
+                  <option value="reviewer">Reviewer</option>
+                </select>
+              </div>
+              <button type="submit" class="button primary">
+                Save User Settings
+              </button>
+            </form>
+          </div>
+
+          <div class="settings-section">
+            <h2>Email Settings</h2>
+            <form>
+              <div class="form-group">
+                <label for="smtp-host">SMTP Host</label>
+                <input
+                  type="text"
+                  id="smtp-host"
+                  placeholder="smtp.example.com"
+                />
+              </div>
+              <div class="form-group">
+                <label for="smtp-port">SMTP Port</label>
+                <input type="number" id="smtp-port" value="587" />
+              </div>
+              <div class="form-group">
+                <label for="smtp-username">SMTP Username</label>
+                <input type="text" id="smtp-username" />
+              </div>
+              <div class="form-group">
+                <label for="smtp-password">SMTP Password</label>
+                <input type="password" id="smtp-password" />
+              </div>
+              <button type="submit" class="button primary">
+                Save Email Settings
+              </button>
+            </form>
+          </div>
+        </div>
       </main>
     </div>
-    <footer></footer>
-
-    <script src="../js/script-admin.js"></script>
   </body>
 </html>

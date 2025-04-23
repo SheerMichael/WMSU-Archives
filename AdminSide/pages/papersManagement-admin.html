@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>User Management</title>
+    <title>Papers Management</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="user-management.css" />
+    <link rel="stylesheet" href="papers-management.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -13,7 +13,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="../css/userManagement.css" />
+    <link rel="stylesheet" href="../css/paperManagement-admin.css" />
   </head>
   <body>
     <div class="dashboard-container">
@@ -27,10 +27,10 @@
         </div>
         <ul class="navigation">
           <li><a href="../index-admin.html">Dashboard</a></li>
-          <li><a href="papersManagement-admin.html">Papers Management</a></li>
           <li class="active">
-            <a href="#">User Management</a>
+            <a href="#">Papers Management</a>
           </li>
+          <li><a href="userManagement-admin.html">User Management</a></li>
           <li><a href="departments-admin.html">Departments</a></li>
           <li><a href="analytics-admin.html">Analytics</a></li>
           <li><a href="Settings-admin.html">Settings</a></li>
@@ -39,10 +39,10 @@
       </aside>
       <main class="main-content">
         <header class="page-header">
-          <h1>User Management</h1>
+          <h1>Papers Management</h1>
           <div class="header-actions">
             <button class="button primary">
-              <i class="fas fa-plus"></i> Add User
+              <i class="fas fa-plus"></i> Add Paper
             </button>
             <button class="button secondary">
               <i class="fas fa-upload"></i> Batch Import
@@ -52,107 +52,113 @@
         <div class="content-area">
           <div class="filters-bar">
             <div class="search-input">
-              <input type="text" placeholder="Search users..." />
+              <input type="text" placeholder="Search papers..." />
               <i class="fas fa-search"></i>
             </div>
             <div class="select-filter">
               <select>
-                <option value="">Role</option>
-                <option value="administrator">Administrator</option>
-                <option value="editor">Editor</option>
-                <option value="reviewer">Reviewer</option>
-                <option value="user">User</option>
+                <option value="">Department</option>
+                <option value="computer-science">Computer Science</option>
+                <option value="physics">Physics</option>
+                <option value="economics">Economics</option>
               </select>
               <i class="fas fa-chevron-down"></i>
             </div>
             <div class="select-filter">
               <select>
                 <option value="">Status</option>
-                <option value="active">Active</option>
-                <option value="inactive">Inactive</option>
+                <option value="approved">Approved</option>
                 <option value="pending">Pending</option>
+                <option value="review">Review</option>
+                <option value="rejected">Rejected</option>
               </select>
               <i class="fas fa-chevron-down"></i>
             </div>
           </div>
-          <div class="users-list-section">
+          <div class="papers-list-section">
+            <ul class="status-tabs">
+              <li class="active"><a href="#">All Papers</a></li>
+              <li><a href="#">Pending</a></li>
+              <li><a href="#">Approved</a></li>
+              <li><a href="#">Rejected</a></li>
+            </ul>
             <table>
               <thead>
                 <tr>
                   <th><input type="checkbox" /></th>
-                  <th>NAME</th>
-                  <th>EMAIL</th>
-                  <th>ROLE</th>
+                  <th>TITLE</th>
+                  <th>AUTHOR(S)</th>
+                  <th>DEPARTMENT</th>
+                  <th>DATE</th>
                   <th>STATUS</th>
-                  <th>REGISTRATION DATE</th>
                   <th></th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td><input type="checkbox" /></td>
-                  <td>John Doe</td>
-                  <td>john.doe@example.com</td>
-                  <td>Administrator</td>
-                  <td class="status active">ACTIVE</td>
-                  <td>15/03/2025</td>
+                  <td>Machine Learning Applications in Healthcare</td>
+                  <td>A. Lee</td>
+                  <td>Computer Science</td>
+                  <td>12/04/2025</td>
+                  <td class="status approved">APPROVED</td>
                   <td><i class="fas fa-ellipsis-v"></i></td>
                 </tr>
                 <tr>
                   <td><input type="checkbox" /></td>
-                  <td>Jane Smith</td>
-                  <td>jane.smith@example.com</td>
-                  <td>Editor</td>
-                  <td class="status active">ACTIVE</td>
-                  <td>20/03/2025</td>
-                  <td><i class="fas fa-ellipsis-v"></i></td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox" /></td>
-                  <td>Peter Jones</td>
-                  <td>peter.jones@example.com</td>
-                  <td>Reviewer</td>
-                  <td class="status pending">PENDING</td>
-                  <td>25/03/2025</td>
-                  <td><i class="fas fa-ellipsis-v"></i></td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox" /></td>
-                  <td>Linda Brown</td>
-                  <td>linda.brown@example.com</td>
-                  <td>User</td>
-                  <td class="status inactive">INACTIVE</td>
-                  <td>01/04/2025</td>
-                  <td><i class="fas fa-ellipsis-v"></i></td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox" /></td>
-                  <td>Michael Davis</td>
-                  <td>michael.davis@example.com</td>
-                  <td>Reviewer</td>
-                  <td class="status active">ACTIVE</td>
-                  <td>05/04/2025</td>
-                  <td><i class="fas fa-ellipsis-v"></i></td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox" /></td>
-                  <td>Susan Wilson</td>
-                  <td>susan.wilson@example.com</td>
-                  <td>Editor</td>
-                  <td class="status active">ACTIVE</td>
+                  <td>Novel Approach to Quantum Computation</td>
+                  <td>B. Johnson</td>
+                  <td>Physics</td>
                   <td>10/04/2025</td>
+                  <td class="status pending">PENDING</td>
+                  <td><i class="fas fa-ellipsis-v"></i></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>Economic Impact of Pandemic on Small Businesses</td>
+                  <td>C. Williams, D. Smith</td>
+                  <td>Economics</td>
+                  <td>09/04/2025</td>
+                  <td class="status approved">APPROVED</td>
+                  <td><i class="fas fa-ellipsis-v"></i></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>Sustainable Building Materials for Urban Development</td>
+                  <td>E. Brown</td>
+                  <td>Architecture</td>
+                  <td>05/04/2025</td>
+                  <td class="status review">REVIEW</td>
+                  <td><i class="fas fa-ellipsis-v"></i></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>Advancements in Autonomous Vehicle Navigation</td>
+                  <td>F. Garcia, G. Singh</td>
+                  <td>Engineering</td>
+                  <td>01/04/2025</td>
+                  <td class="status approved">APPROVED</td>
+                  <td><i class="fas fa-ellipsis-v"></i></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>Gene Therapy Applications in Chronic Diseases</td>
+                  <td>H. Miller</td>
+                  <td>Medicine</td>
+                  <td>29/03/2025</td>
+                  <td class="status rejected">REJECTED</td>
                   <td><i class="fas fa-ellipsis-v"></i></td>
                 </tr>
               </tbody>
             </table>
             <div class="pagination">
-              <p>Showing 1-6 of 120 users</p>
+              <p>Showing 1-6 of 523 papers</p>
               <div class="page-numbers">
                 <button class="active">1</button>
                 <button>2</button>
                 <button>3</button>
                 <button>&hellip;</button>
-                <button>20</button>
+                <button>88</button>
                 <button class="next"><i class="fas fa-arrow-right"></i></button>
               </div>
             </div>

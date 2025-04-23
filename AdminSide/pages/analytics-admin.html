@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analytics</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="analytics.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/analytics.css" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <aside class="sidebar">
+        <div class="user-info">
+          <div class="avatar"></div>
+          <div class="admin-details">
+            <div class="name">Admin User</div>
+            <div class="role">Administrator</div>
+          </div>
+        </div>
+        <ul class="navigation">
+          <li><a href="../index-admin.html">Dashboard</a></li>
+          <li><a href="papersManagement-admin.html">Papers Management</a></li>
+          <li><a href="userManagement-admin.html">User Management</a></li>
+          <li><a href="departments-admin.html">Departments</a></li>
+          <li class="active"><a href="#">Analytics</a></li>
+          <li><a href="Settings-admin.html">Settings</a></li>
+          <li><a href="../../pages/login.html">Logout</a></li>
+        </ul>
+      </aside>
+      <main class="main-content">
+        <header class="page-header">
+          <h1>Analytics</h1>
+          <div class="header-actions">
+            <button class="button secondary">
+              <i class="fas fa-download"></i> Export Data
+            </button>
+          </div>
+        </header>
+        <div class="content-area">
+          <div class="analytics-widgets">
+            <div class="widget">
+              <div class="widget-header">
+                <h2>Total Papers Submitted</h2>
+              </div>
+              <div class="widget-content">
+                <div class="data-value">1,250</div>
+                <div class="data-trend up">
+                  <i class="fas fa-arrow-up"></i> +15%
+                </div>
+              </div>
+            </div>
+            <div class="widget">
+              <div class="widget-header">
+                <h2>New Users This Month</h2>
+              </div>
+              <div class="widget-content">
+                <div class="data-value">85</div>
+                <div class="data-trend down">
+                  <i class="fas fa-arrow-down"></i> -5%
+                </div>
+              </div>
+            </div>
+            <div class="widget">
+              <div class="widget-header">
+                <h2>Papers Pending Review</h2>
+              </div>
+              <div class="widget-content">
+                <div class="data-value">32</div>
+                <div class="data-trend stable">
+                  <i class="fas fa-minus"></i> Stable
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="charts-section">
+            <div class="chart-widget">
+              <div class="widget-header">
+                <h2>Papers Submission Trend</h2>
+              </div>
+              <div class="chart-container">
+                <div class="chart-placeholder">Line Chart</div>
+              </div>
+            </div>
+            <div class="chart-widget">
+              <div class="widget-header">
+                <h2>User Roles Distribution</h2>
+              </div>
+              <div class="chart-container">
+                <div class="chart-placeholder">Pie Chart</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="data-table-section">
+            <h2>Recent Activity Log</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Timestamp</th>
+                  <th>User</th>
+                  <th>Activity</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2025-04-23 10:00:00</td>
+                  <td>John Doe</td>
+                  <td>Paper Submitted</td>
+                  <td>"New Research on..."</td>
+                </tr>
+                <tr>
+                  <td>2025-04-23 09:30:00</td>
+                  <td>Jane Smith</td>
+                  <td>User Approved</td>
+                  <td>"Reviewer: Peter Jones"</td>
+                </tr>
+                <tr>
+                  <td>2025-04-22 16:45:00</td>
+                  <td>Admin User</td>
+                  <td>Settings Updated</td>
+                  <td>"Email Configuration"</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

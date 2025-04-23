@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Departments</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="departments.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/department.css" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <aside class="sidebar">
+        <div class="user-info">
+          <div class="avatar"></div>
+          <div class="admin-details">
+            <div class="name">Admin User</div>
+            <div class="role">Administrator</div>
+          </div>
+        </div>
+        <ul class="navigation">
+          <li><a href="../index-admin.html">Dashboard</a></li>
+          <li><a href="papersManagement-admin.html">Papers Management</a></li>
+          <li><a href="userManagement-admin.html">User Management</a></li>
+          <li class="active"><a href="#">Departments</a></li>
+          <li><a href="analytics-admin.html">Analytics</a></li>
+          <li><a href="Settings-admin.html">Settings</a></li>
+          <li><a href="../../pages/login.html">Logout</a></li>
+        </ul>
+      </aside>
+      <main class="main-content">
+        <header class="page-header">
+          <h1>Departments</h1>
+          <div class="header-actions">
+            <button class="button primary">
+              <i class="fas fa-plus"></i> Add Department
+            </button>
+          </div>
+        </header>
+        <div class="content-area">
+          <div class="departments-list-section">
+            <table>
+              <thead>
+                <tr>
+                  <th><input type="checkbox" /></th>
+                  <th>DEPARTMENT NAME</th>
+                  <th>DESCRIPTION</th>
+                  <th>NUMBER OF PAPERS</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>Computer Science</td>
+                  <td>Studies related to computation and information.</td>
+                  <td>350</td>
+                  <td><i class="fas fa-ellipsis-v"></i></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>Physics</td>
+                  <td>The study of matter, energy, space, and time.</td>
+                  <td>280</td>
+                  <td><i class="fas fa-ellipsis-v"></i></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>Economics</td>
+                  <td>
+                    Social science that studies how societies manage scarce
+                    resources.
+                  </td>
+                  <td>210</td>
+                  <td><i class="fas fa-ellipsis-v"></i></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>Engineering</td>
+                  <td>
+                    Application of scientific and mathematical principles to
+                    design and build.
+                  </td>
+                  <td>420</td>
+                  <td><i class="fas fa-ellipsis-v"></i></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>Medicine</td>
+                  <td>
+                    The science and practice of diagnosing, treating, and
+                    preventing disease.
+                  </td>
+                  <td>190</td>
+                  <td><i class="fas fa-ellipsis-v"></i></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="pagination">
+              <p>Showing 1-5 of 50 departments</p>
+              <div class="page-numbers">
+                <button class="active">1</button>
+                <button>2</button>
+                <button>&hellip;</button>
+                <button>10</button>
+                <button class="next"><i class="fas fa-arrow-right"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

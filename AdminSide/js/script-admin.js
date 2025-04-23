@@ -1,5 +1,9 @@
 $(document).ready(function () {
-  $("#myTable").DataTable();
+  $("#myTable").DataTable({
+    responsive: true,
+    searching: false,
+    lengthChange: false,
+  });
 });
 
 const burger = document.querySelector(".burger");
