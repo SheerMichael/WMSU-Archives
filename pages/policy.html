@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../assets/img/logo.png" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <title>WMSU-Archives</title>
+  </head>
+  <body>
+    <header>
+      <header>
+        <nav class="navbar1">
+          <div class="navWMSU">
+            <img class="navImg" src="..\assets\img\logo.png" alt="WMSU Logo" />
+            <a href="">Librero, Sheer Michael C.</a>
+            <p>|</p>
+            <a href="..\index.html">Log out</a>
+          </div>
+        </nav>
+        <nav class="navbar2">
+          <ul>
+            <li><a href="..\pages\user.html">Home</a></li>
+            <li><a href="pages\category.html">Resources</a></li>
+            <li><a href="#">Information</a></li>
+          </ul>
+        </nav>
+      </header>
+    </header>
+    <main>
+      <div class="PolicyContainer">
+        <div class="PolicyTabs">
+          <button
+            class="PolicyTab PolicyActive"
+            onclick="changePolicy(event, 'irPolicy')"
+          >
+            Institutional Repository Policy
+          </button>
+          <button class="PolicyTab" onclick="changePolicy(event, 'etdPolicy')">
+            Electronic Thesis and Dissertation Policy
+          </button>
+        </div>
+
+        <div id="irPolicy" class="PolicyContent PolicyActive">
+          <h1 class="PolicyHeading">Overview</h1>
+
+          <h2 class="PolicySubheading">1.1. Background</h2>
+          <p class="PolicyText">
+            The WMSU Research Archive (WRA) is being launched to centralize the
+            university's scholarly works—theses, dissertations, journal
+            articles, reports, and other research outputs—into a single,
+            open‐access platform. It follows the model of Harvard's DASH, which
+            since 2009 has served as Harvard's central open‐access repository
+            for community scholarship.
+          </p>
+
+          <h2 class="PolicySubheading">1.2. Administration</h2>
+          <p class="PolicyText">
+            Day‐to‐day management of WRA shall be the responsibility of the WMSU
+            Library, under the Office of Research and Development. High‐level
+            policies and strategic decisions will be overseen by the Office of
+            the Vice Chancellor for Academic Affairs (OVCAA), similar to the
+            governance structure of DASH at Harvard.
+          </p>
+
+          <h1 class="PolicyHeading">Mission Statement</h1>
+          <p class="PolicyText">
+            The WMSU Research Archive is the official institutional repository
+            of Western Mindanao State University. It identifies, acquires,
+            preserves, and provides open, long‐term access to the university's
+            digital research outputs, supporting WMSU's core missions of
+            education, research, and community engagement.
+          </p>
+
+          <h1 class="PolicyHeading">Authority</h1>
+          <p class="PolicyText">
+            This initiative is launched by WMSU's Office of Research and
+            Development in collaboration with the University Library. It derives
+            its mandate from the university's charter and the Library's archival
+            responsibilities, analogous to ESCAP's use of DSpace for
+            policy‐driven repositories.
+          </p>
+
+          <h1 class="PolicyHeading">Collection Development Statement</h1>
+          <p class="PolicyText">
+            Materials in WRA shall reflect the university's academic scope and
+            have enduring administrative, legal, fiscal, research, or historical
+            value. Collection criteria follow best practices outlined by peer
+            institutions, such as the University of Hawai'i's ScholarSpace
+            collection development guidelines.
+          </p>
+
+          <h1 class="PolicyHeading">Content Policy</h1>
+          <p class="PolicyText">WRA will host digital versions of:</p>
+          <ul class="PolicyList">
+            <li class="PolicyListItem">
+              Electronic Theses and Dissertations (ETDs) from all
+              degree‐granting units
+            </li>
+            <li class="PolicyListItem">
+              Journal articles authored by WMSU faculty and researchers
+            </li>
+            <li class="PolicyListItem">
+              Conference proceedings, technical reports, working papers, and
+              datasets
+            </li>
+          </ul>
+          <p class="PolicyText">
+            This aligns with the DSpace platform's ability to preserve and serve
+            diverse file formats, from PDFs to multimedia.
+          </p>
+        </div>
+
+        <div id="etdPolicy" class="PolicyContent">
+          <h1 class="PolicyHeading">Executive Summary</h1>
+          <p class="PolicyText">
+            The WMSU Research Archive ETD Policy establishes a framework to
+            maximize access to student research, protect author and university
+            rights, and ensure long‑term preservation of digital theses and
+            dissertations. Rooted in the Philippine Technology Transfer Act (RA
+            10055) and WMSU's Intellectual Property policy, it assigns clear
+            responsibilities to contributors, library staff, and administrators,
+            and defines submission, access, and take‑down procedures.
+          </p>
+
+          <h1 class="PolicyHeading">1. Overview</h1>
+          <p class="PolicyText">
+            Electronic Theses and Dissertations (ETDs) transform traditional,
+            paper‑bound theses into digital formats that can be accessed and
+            preserved online — making graduate student research available as
+            full‑text documents and multimedia presentations for use by the
+            university community and external scholars.
+          </p>
+          <p class="PolicyText">
+            In line with Republic Act No. 10055 and WMSU's Revised Intellectual
+            Property Policy, the ETD Program of WMSU pursues the following
+            goals:
+          </p>
+          <ul class="PolicyList">
+            <li class="PolicyListItem">
+              Enable Open Access to scholarly works for teaching, research, and
+              public benefit, while safeguarding author and institutional
+              copyright.
+            </li>
+            <li class="PolicyListItem">
+              Create a Comprehensive Library of WMSU's academic output in one
+              searchable digital collection.
+            </li>
+            <li class="PolicyListItem">
+              Create and Preserve Digital Heritage through adherence to
+              international digital preservation standards.
+            </li>
+            <li class="PolicyListItem">
+              Uncover Research Potential by broadening dissemination beyond
+              campus.
+            </li>
+            <li class="PolicyListItem">
+              Engage the Academic Community in electronic publishing and digital
+              libraries, fostering collaboration and best practices in scholarly
+              communication.
+            </li>
+          </ul>
+
+          <h1 class="PolicyHeading">2. Mandate</h1>
+          <p class="PolicyText">This policy is founded on:</p>
+          <ul class="PolicyList">
+            <li class="PolicyListItem">
+              Republic Act No. 10055 (Philippine Technology Transfer Act of
+              2009): mandates greater public access to knowledge generated from
+              government‑funded R&D.
+            </li>
+            <li class="PolicyListItem">
+              Revised Intellectual Property Rights Policy of WMSU System (2011):
+              recognizes creators' ownership of their works and provides
+              guidelines for technology transfer and open access.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      function changePolicy(event, policyId) {
+        // Hide all policy contents
+        var policyContents = document.getElementsByClassName("PolicyContent");
+        for (var i = 0; i < policyContents.length; i++) {
+          policyContents[i].classList.remove("PolicyActive");
+        }
+
+        // Remove active class from all tabs
+        var tabs = document.getElementsByClassName("PolicyTab");
+        for (var i = 0; i < tabs.length; i++) {
+          tabs[i].classList.remove("PolicyActive");
+        }
+
+        // Show the selected policy content and mark tab as active
+        document.getElementById(policyId).classList.add("PolicyActive");
+        event.currentTarget.classList.add("PolicyActive");
+      }
+    </script>
+  </body>
+</html>

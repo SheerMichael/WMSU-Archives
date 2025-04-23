@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../assets/img/logo.png" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>WMSU-Archives</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar1">
+        <div class="navWMSU">
+          <img class="navImg" src="..\assets\img\logo.png" alt="WMSU Logo" />
+          <a href="">Librero, Sheer Michael C.</a>
+          <p>|</p>
+          <a href="..\index.html">Log out</a>
+        </div>
+      </nav>
+      <nav class="navbar2">
+        <ul>
+          <li><a href="..\pages\user.html">Home</a></li>
+          <li><a href="pages\category.html">Resources</a></li>
+          <li><a href="#">Information</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="UserContainer">
+        <div class="UserContent">
+          <div class="UserSidebar">
+            <ul class="UserSidebarMenu">
+              <li class="UserActive" id="profileTab">
+                <a href="#profile">My Profile</a>
+              </li>
+              <li id="pendingTab">
+                <a href="#pending">Pending Submissions</a>
+              </li>
+              <li id="approvedTab">
+                <a href="#approved">Approved Submissions</a>
+              </li>
+              <li id="notificationTab">
+                <a href="#notifications">Notification</a>
+              </li>
+              <li><a href="..\pages\upload.html">Upload Work</a></li>
+            </ul>
+          </div>
+
+          <div class="UserMainContent">
+            <!-- Profile Panel -->
+            <div id="profilePanel" class="UserPanel UserActive">
+              <div class="UserProfileCard">
+                <div class="UserProfileHeader">
+                  <div class="UserProfileAvatar">
+                    <img src="..\assets\img\sheer.jpg" alt="Profile Image" />
+                  </div>
+                  <div class="UserProfileInfo">
+                    <h2>Librero, Sheer Michael C.</h2>
+                  </div>
+                </div>
+              </div>
+
+              <div class="UserProfileCard">
+                <h3 class="UserSectionTitle">Pending Submissions</h3>
+                <article class="UserSubmissionArticle">
+                  <div class="UserThumbnail">
+                    <img src="..\assets\img\thumb1.jpg" alt="Thumbnail" />
+                  </div>
+                  <div class="UserArticleContent">
+                    <h5>
+                      <a href="pages/publication.html"
+                        >Publication: Bonnardot's Essai: A Nineteenth-Century
+                        Restoration Manual and Its Author</a
+                      >
+                    </h5>
+                    <p class="UserMeta">(2013) Sokolowski, Christopher</p>
+                    <div class="UserAbstractContainer">
+                      <p class="UserAbstract">
+                        This paper evaluates the influence of a
+                        nineteenth-century French manual on the restoration of
+                        prints, drawings, and books to contemporary conservation
+                        philosophy and practice.
+                      </p>
+                    </div>
+                    <a class="UserShowMore" href="javascript:void(0);"
+                      >▼ Show more</a
+                    >
+                  </div>
+                </article>
+              </div>
+
+              <div class="UserProfileCard">
+                <h3 class="UserSectionTitle">Approved Submissions</h3>
+                <article class="UserSubmissionArticle">
+                  <div class="UserThumbnail">
+                    <img src="..\assets\img\thumb1.jpg" alt="Thumbnail" />
+                  </div>
+                  <div class="UserArticleContent">
+                    <h5>
+                      <a href="pages/publication.html"
+                        >Publication: Bonnardot's Essai: A Nineteenth-Century
+                        Restoration Manual and Its Author</a
+                      >
+                    </h5>
+                    <p class="UserMeta">(2013) Sokolowski, Christopher</p>
+                    <div class="UserAbstractContainer">
+                      <p class="UserAbstract">
+                        This paper evaluates the influence of a
+                        nineteenth-century French manual on the restoration of
+                        prints, drawings, and books to contemporary conservation
+                        philosophy and practice.
+                      </p>
+                    </div>
+                    <a class="UserShowMore" href="javascript:void(0);"
+                      >▼ Show more</a
+                    >
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <!-- Pending Submissions Panel -->
+            <div id="pendingPanel" class="UserPanel">
+              <a href="#profile" class="UserBackButton">Back to Profile</a>
+              <div class="UserProfileCard">
+                <h3 class="UserSectionTitle">Pending Submissions</h3>
+                <article class="UserSubmissionArticle">
+                  <div class="UserThumbnail">
+                    <img src="..\assets\img\thumb1.jpg" alt="Thumbnail" />
+                  </div>
+                  <div class="UserArticleContent">
+                    <h5>
+                      <a href="pages/publication.html"
+                        >Publication: Bonnardot's Essai: A Nineteenth-Century
+                        Restoration Manual and Its Author</a
+                      >
+                    </h5>
+                    <p class="UserMeta">(2013) Sokolowski, Christopher</p>
+                    <div class="UserAbstractContainer">
+                      <p class="UserAbstract">
+                        This paper evaluates the influence of a
+                        nineteenth-century French manual on the restoration of
+                        prints, drawings, and books to contemporary conservation
+                        philosophy and practice. First published in 1846, Essai
+                        sur la restauration des anciennes estampes et des livres
+                        rares was researched and written by Alfred Bonnardot
+                        (1808-1884) a writer, bibliophile, and historian of
+                        Paris.
+                      </p>
+                    </div>
+                    <a class="UserShowMore" href="javascript:void(0);"
+                      >▼ Show more</a
+                    >
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <!-- Approved Submissions Panel -->
+            <div id="approvedPanel" class="UserPanel">
+              <a href="#profile" class="UserBackButton">Back to Profile</a>
+              <div class="UserProfileCard">
+                <h3 class="UserSectionTitle">Approved Submissions</h3>
+                <article class="UserSubmissionArticle">
+                  <div class="UserThumbnail">
+                    <img src="..\assets\img\thumb1.jpg" alt="Thumbnail" />
+                  </div>
+                  <div class="UserArticleContent">
+                    <h5>
+                      <a href="pages/publication.html"
+                        >Publication: Bonnardot's Essai: A Nineteenth-Century
+                        Restoration Manual and Its Author</a
+                      >
+                    </h5>
+                    <p class="UserMeta">(2013) Sokolowski, Christopher</p>
+                    <div class="UserAbstractContainer">
+                      <p class="UserAbstract">
+                        This paper evaluates the influence of a
+                        nineteenth-century French manual on the restoration of
+                        prints, drawings, and books to contemporary conservation
+                        philosophy and practice. First published in 1846, Essai
+                        sur la restauration des anciennes estampes et des livres
+                        rares was researched and written by Alfred Bonnardot
+                        (1808-1884) a writer, bibliophile, and historian of
+                        Paris.
+                      </p>
+                    </div>
+                    <a class="UserShowMore" href="javascript:void(0);"
+                      >▼ Show more</a
+                    >
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <!-- Notifications Panel -->
+            <div id="notificationsPanel" class="UserPanel">
+              <a href="#profile" class="UserBackButton">Back to Profile</a>
+              <div class="UserProfileCard">
+                <h3 class="UserSectionTitle">Notifications</h3>
+                <div class="UserNotification">
+                  Congratulations! Your paper "Bonnardot's Essai: A
+                  Nineteenth-Century Restoration Manual and Its Author" has been
+                  approved.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      // Tab switching functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        // Function to handle hash change
+        function handleHashChange() {
+          const hash = window.location.hash || "#profile";
+
+          // Hide all panels
+          document.querySelectorAll(".UserPanel").forEach((panel) => {
+            panel.classList.remove("UserActive");
+          });
+
+          // Remove active class from all tabs
+          document.querySelectorAll(".UserSidebarMenu li").forEach((tab) => {
+            tab.classList.remove("UserActive");
+          });
+
+          // Show the selected panel
+          const selectedPanel = document.getElementById(
+            hash.substring(1) + "Panel"
+          );
+          if (selectedPanel) {
+            selectedPanel.classList.add("UserActive");
+          }
+
+          // Set active tab
+          const selectedTab = document.getElementById(
+            hash.substring(1) + "Tab"
+          );
+          if (selectedTab) {
+            selectedTab.classList.add("UserActive");
+          }
+        }
+
+        // Initial load
+        handleHashChange();
+
+        // Listen for hash changes
+        window.addEventListener("hashchange", handleHashChange);
+
+        // Handle show more/less toggle
+        document.querySelectorAll(".UserShowMore").forEach((button) => {
+          button.addEventListener("click", function () {
+            const abstractContainer = this.previousElementSibling;
+            const abstract = abstractContainer.querySelector(".UserAbstract");
+
+            if (abstract.style.webkitLineClamp === "none") {
+              abstract.style.webkitLineClamp = "2";
+              this.textContent = "▼ Show more";
+            } else {
+              abstract.style.webkitLineClamp = "none";
+              this.textContent = "▲ Show less";
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
