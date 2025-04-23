@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../assets/img/logo.png" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>WMSU-Archives</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="AdviserHeader">
+          <nav class="AdviserNavbar1">
+            <div class="AdviserNavWMSU">
+              <img
+                class="AdviserNavImg"
+                src="..\assets\img\logo.png"
+                alt="WMSU Logo"
+              />
+              <a href="">Dr. Garcia, Maria B. (Adviser)</a>
+              <p>|</p>
+              <a href="..\index.html">Log out</a>
+            </div>
+          </nav>
+          <nav class="AdviserNavbar2">
+            <ul>
+              <li><a href="">Dashboard</a></li>
+              <li><a href="">Papers</a></li>
+              <li><a href="">Students</a></li>
+              <li><a href="">Reports</a></li>
+            </ul>
+          </nav>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="AdviserContainer">
+        <div class="AdviserHeader"></div>
+        <div class="AdviserContent">
+          <div class="AdviserSidebar">
+            <ul class="AdviserSidebarMenu">
+              <li class="AdviserActive" id="dashboardTab">
+                <a href="#dashboard">Dashboard</a>
+              </li>
+              <li id="pendingTab">
+                <a href="#pending"
+                  >Pending Reviews <span class="AdviserCount">3</span></a
+                >
+              </li>
+              <li id="approvedTab"><a href="#approved">Approved</a></li>
+              <li id="revisionsTab"><a href="#revisions">Needs Revision</a></li>
+              <li id="notificationTab">
+                <a href="#notifications"
+                  >Notifications <span class="AdviserCount">2</span></a
+                >
+              </li>
+              <li><a href="">Settings</a></li>
+            </ul>
+          </div>
+
+          <div class="AdviserMainContent">
+            <!-- Dashboard Panel -->
+            <div id="dashboardPanel" class="AdviserPanel AdviserActive">
+              <div class="AdviserProfileCard">
+                <div class="AdviserProfileHeader">
+                  <div class="AdviserProfileAvatar">
+                    <img src="/api/placeholder/400/400" alt="Profile Image" />
+                  </div>
+                  <div class="AdviserProfileInfo">
+                    <h2>Dr. Garcia, Maria B.</h2>
+                    <p>Faculty Adviser - Computer Science Department</p>
+                  </div>
+                </div>
+
+                <div class="AdviserStats">
+                  <div class="AdviserStatItem">
+                    <div class="AdviserStatValue AdviserStatPending">3</div>
+                    <div class="AdviserStatLabel">Pending</div>
+                  </div>
+                  <div class="AdviserStatItem">
+                    <div class="AdviserStatValue AdviserStatApproved">12</div>
+                    <div class="AdviserStatLabel">Approved</div>
+                  </div>
+                  <div class="AdviserStatItem">
+                    <div class="AdviserStatValue AdviserStatRevision">2</div>
+                    <div class="AdviserStatLabel">For Revision</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="AdviserProfileCard">
+                <h3 class="AdviserSectionTitle">Recent Submissions</h3>
+
+                <article class="AdviserSubmissionArticle">
+                  <div class="AdviserThumbnail">
+                    <img src="/api/placeholder/400/300" alt="Thumbnail" />
+                  </div>
+                  <div class="AdviserArticleContent">
+                    <h5>
+                      <a href="#review-paper"
+                        >Developing an IoT-based System for Smart Campus
+                        Monitoring</a
+                      >
+                      <span class="AdviserBadge AdviserBadgePending"
+                        >Pending</span
+                      >
+                    </h5>
+                    <p class="AdviserMeta">
+                      Submitted by: Santos, Juan P. | Date: April 20, 2025
+                    </p>
+                    <div class="AdviserAbstractContainer">
+                      <p class="AdviserAbstract">
+                        This research focuses on developing an Internet of
+                        Things (IoT) system for monitoring and managing campus
+                        resources efficiently. Using a network of sensors and
+                        cloud infrastructure...
+                      </p>
+                    </div>
+                    <a class="AdviserShowMore" href="javascript:void(0);"
+                      >▼ Show more</a
+                    >
+                    <div class="AdviserActionButtons">
+                      <button class="AdviserButton AdviserViewBtn">
+                        View Details
+                      </button>
+                      <button class="AdviserButton AdviserApproveBtn">
+                        Approve
+                      </button>
+                      <button class="AdviserButton AdviserReviseBtn">
+                        Request Revision
+                      </button>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="AdviserSubmissionArticle">
+                  <div class="AdviserThumbnail">
+                    <img src="/api/placeholder/400/300" alt="Thumbnail" />
+                  </div>
+                  <div class="AdviserArticleContent">
+                    <h5>
+                      <a href="#review-paper"
+                        >Machine Learning Approach for Detecting Academic
+                        Plagiarism</a
+                      >
+                      <span class="AdviserBadge AdviserBadgeApproved"
+                        >Approved</span
+                      >
+                    </h5>
+                    <p class="AdviserMeta">
+                      Submitted by: Reyes, Ana M. | Date: April 15, 2025
+                    </p>
+                    <div class="AdviserAbstractContainer">
+                      <p class="AdviserAbstract">
+                        This study proposes a novel approach for detecting
+                        plagiarism in academic papers using advanced machine
+                        learning algorithms. The system combines natural
+                        language processing techniques...
+                      </p>
+                    </div>
+                    <a class="AdviserShowMore" href="javascript:void(0);"
+                      >▼ Show more</a
+                    >
+                    <div class="AdviserActionButtons">
+                      <button class="AdviserButton AdviserViewBtn">
+                        View Details
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="AdviserProfileCard">
+                <h3 class="AdviserSectionTitle">Recent Notifications</h3>
+                <div class="AdviserNotification">
+                  New submission received from Santos, Juan P.: "Developing an
+                  IoT-based System for Smart Campus Monitoring"
+                </div>
+                <div class="AdviserNotification">
+                  Reyes, Ana M. has updated their submission based on your
+                  revision requests.
+                </div>
+              </div>
+            </div>
+
+            <!-- Pending Reviews Panel -->
+            <div id="pendingPanel" class="AdviserPanel">
+              <a href="#dashboard" class="AdviserBackButton"
+                >Back to Dashboard</a
+              >
+              <div class="AdviserProfileCard">
+                <h3 class="AdviserSectionTitle">
+                  Pending Reviews <span class="AdviserCount">3</span>
+                </h3>
+
+                <article class="AdviserSubmissionArticle">
+                  <div class="AdviserThumbnail">
+                    <img src="/api/placeholder/400/300" alt="Thumbnail" />
+                  </div>
+                  <div class="AdviserArticleContent">
+                    <h5>
+                      <a href="#review-paper"
+                        >Developing an IoT-based System for Smart Campus
+                        Monitoring</a
+                      >
+                    </h5>
+                    <p class="AdviserMeta">
+                      Submitted by: Santos, Juan P. | Date: April 20, 2025
+                    </p>
+                    <div class="AdviserAbstractContainer">
+                      <p class="AdviserAbstract">
+                        This research focuses on developing an Internet of
+                        Things (IoT) system for monitoring and managing campus
+                        resources efficiently. Using a network of sensors and
+                        cloud infrastructure, the system aims to optimize energy
+                        consumption, monitor classroom occupancy, and improve
+                        resource allocation across the university campus.
+                      </p>
+                    </div>
+                    <a class="AdviserShowMore" href="javascript:void(0);"
+                      >▼ Show more</a
+                    >
+                    <div class="AdviserActionButtons">
+                      <button class="AdviserButton AdviserViewBtn">
+                        View Full Paper
+                      </button>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="AdviserSubmissionArticle">
+                  <div class="AdviserThumbnail">
+                    <img src="/api/placeholder/400/300" alt="Thumbnail" />
+                  </div>
+                  <div class="AdviserArticleContent">
+                    <h5>
+                      <a href="#review-paper"
+                        >Blockchain-based Solution for Academic Records
+                        Verification</a
+                      >
+                    </h5>
+                    <p class="AdviserMeta">
+                      Submitted by: Cruz, Miguel A. | Date: April 18, 2025
+                    </p>
+                    <div class="AdviserAbstractContainer">
+                      <p class="AdviserAbstract">
+                        This thesis presents a blockchain-based solution to
+                        address the challenges in verifying academic
+                        credentials. The proposed system uses distributed ledger
+                        technology to create tamper-proof records of academic
+                        achievements that can be easily verified by potential
+                        employers and academic institutions.
+                      </p>
+                    </div>
+                    <a class="AdviserShowMore" href="javascript:void(0);"
+                      >▼ Show more</a
+                    >
+                    <div class="AdviserActionButtons">
+                      <button class="AdviserButton AdviserViewBtn">
+                        View Full Paper
+                      </button>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="AdviserSubmissionArticle">
+                  <div class="AdviserThumbnail">
+                    <img src="/api/placeholder/400/300" alt="Thumbnail" />
+                  </div>
+                  <div class="AdviserArticleContent">
+                    <h5>
+                      <a href="#review-paper"
+                        >Natural Language Processing for Filipino Dialect
+                        Translation</a
+                      >
+                    </h5>
+                    <p class="AdviserMeta">
+                      Submitted by: Lopez, Patricia D. | Date: April 16, 2025
+                    </p>
+                    <div class="AdviserAbstractContainer">
+                      <p class="AdviserAbstract">
+                        This research develops a natural language processing
+                        model for translating between Filipino dialects. The
+                        system aims to preserve cultural heritage and improve
+                        communication by enabling seamless translation between
+                        Tagalog, Cebuano, Ilocano, and other major Filipino
+                        dialects.
+                      </p>
+                    </div>
+                    <a class="AdviserShowMore" href="javascript:void(0);"
+                      >▼ Show more</a
+                    >
+                    <div class="AdviserActionButtons">
+                      <button class="AdviserButton AdviserViewBtn">
+                        View Full Paper
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <!-- Review Paper Panel -->
+            <div id="reviewPaperPanel" class="AdviserPanel">
+              <a href="#pending" class="AdviserBackButton"
+                >Back to Pending Reviews</a
+              >
+              <div class="AdviserProfileCard">
+                <h3 class="AdviserSectionTitle">Review Submission</h3>
+
+                <div class="AdviserSubmissionArticle">
+                  <div class="AdviserArticleContent">
+                    <h5>
+                      <a href="#review-paper"
+                        >Developing an IoT-based System for Smart Campus
+                        Monitoring</a
+                      >
+                    </h5>
+                    <p class="AdviserMeta">
+                      Submitted by: Santos, Juan P. | Date: April 20, 2025
+                    </p>
+                  </div>
+                </div>
+
+                <div class="AdviserChecklist">
+                  <h4
+                    style="margin-top: 0; font-size: 15px; margin-bottom: 10px"
+                  >
+                    Review Checklist
+                  </h4>
+                  <div class="AdviserChecklistItem">
+                    <input type="checkbox" id="scope" name="scope" />
+                    <label for="scope"
+                      >Research scope is well-defined and appropriate</label
+                    >
+                  </div>
+                  <div class="AdviserChecklistItem">
+                    <input
+                      type="checkbox"
+                      id="methodology"
+                      name="methodology"
+                    />
+                    <label for="methodology"
+                      >Research methodology is sound and clearly
+                      explained</label
+                    >
+                  </div>
+                  <div class="AdviserChecklistItem">
+                    <input type="checkbox" id="formatting" name="formatting" />
+                    <label for="formatting"
+                      >Paper follows correct formatting guidelines</label
+                    >
+                  </div>
+                  <div class="AdviserChecklistItem">
+                    <input type="checkbox" id="citations" name="citations" />
+                    <label for="citations"
+                      >Citations and references are properly formatted</label
+                    >
+                  </div>
+                  <div class="AdviserChecklistItem">
+                    <input type="checkbox" id="grammar" name="grammar" />
+                    <label for="grammar"
+                      >Grammar and writing quality meet academic
+                      standards</label
+                    >
+                  </div>
+                  <div class="AdviserChecklistItem">
+                    <input type="checkbox" id="signatures" name="signatures" />
+                    <label for="signatures"
+                      >All required signatures are present and valid</label
+                    >
+                  </div>
+                </div>
+
+                <div class="AdviserCommentBox">
+                  <label for="adviserComments"
+                    >Comments for revision (if needed):</label
+                  >
+                  <textarea
+                    id="adviserComments"
+                    placeholder="Enter your feedback and revision requirements here..."
+                  ></textarea>
+                </div>
+
+                <div class="AdviserSubmitArea">
+                  <div class="AdviserActionButtons">
+                    <button class="AdviserButton AdviserApproveBtn">
+                      Approve Submission
+                    </button>
+                    <button class="AdviserButton AdviserReviseBtn">
+                      Request Revision
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Notifications Panel -->
+            <div id="notificationsPanel" class="AdviserPanel">
+              <a href="#dashboard" class="AdviserBackButton"
+                >Back to Dashboard</a
+              >
+              <div class="AdviserProfileCard">
+                <h3 class="AdviserSectionTitle">Notifications</h3>
+
+                <div class="AdviserNotification">
+                  <strong>New Submission</strong> - Santos, Juan P. has
+                  submitted "Developing an IoT-based System for Smart Campus
+                  Monitoring" for your review.
+                </div>
+
+                <div class="AdviserNotification">
+                  <strong>Revision Submitted</strong> - Reyes, Ana M. has
+                  updated their submission "Machine Learning Approach for
+                  Detecting Academic Plagiarism" based on your revision
+                  requests.
+                </div>
+
+                <div class="AdviserNotification">
+                  <strong>New Submission</strong> - Cruz, Miguel A. has
+                  submitted "Blockchain-based Solution for Academic Records
+                  Verification" for your review.
+                </div>
+
+                <div class="AdviserNotification">
+                  <strong>New Submission</strong> - Lopez, Patricia D. has
+                  submitted "Natural Language Processing for Filipino Dialect
+                  Translation" for your review.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      // Tab switching functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        // Function to handle hash change
+        function handleHashChange() {
+          const hash = window.location.hash || "#dashboard";
+
+          // Hide all panels
+          document.querySelectorAll(".AdviserPanel").forEach((panel) => {
+            panel.classList.remove("AdviserActive");
+          });
+
+          // Remove active class from all tabs
+          document.querySelectorAll(".AdviserSidebarMenu li").forEach((tab) => {
+            tab.classList.remove("AdviserActive");
+          });
+
+          // Special case for the review-paper panel
+          if (hash === "#review-paper") {
+            document
+              .getElementById("reviewPaperPanel")
+              .classList.add("AdviserActive");
+            return;
+          }
+
+          // Show the selected panel
+          const selectedPanel = document.getElementById(
+            hash.substring(1) + "Panel"
+          );
+          if (selectedPanel) {
+            selectedPanel.classList.add("AdviserActive");
+          }
+
+          // Set active tab
+          const selectedTab = document.getElementById(
+            hash.substring(1) + "Tab"
+          );
+          if (selectedTab) {
+            selectedTab.classList.add("AdviserActive");
+          }
+        }
+
+        // Initial load
+        handleHashChange();
+
+        // Listen for hash changes
+        window.addEventListener("hashchange", handleHashChange);
+
+        // Handle show more/less toggle
+        document.querySelectorAll(".AdviserShowMore").forEach((button) => {
+          button.addEventListener("click", function () {
+            const abstractContainer = this.previousElementSibling;
+            const abstract =
+              abstractContainer.querySelector(".AdviserAbstract");
+
+            if (abstract.style.webkitLineClamp === "none") {
+              abstract.style.webkitLineClamp = "2";
+              this.textContent = "▼ Show more";
+            } else {
+              abstract.style.webkitLineClamp = "none";
+              this.textContent = "▲ Show less";
+            }
+          });
+        });
+
+        // Handle View Details button
+        document.querySelectorAll(".AdviserViewBtn").forEach((button) => {
+          button.addEventListener("click", function () {
+            window.location.hash = "review-paper";
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
